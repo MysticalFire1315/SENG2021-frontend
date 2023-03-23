@@ -10,17 +10,17 @@ const NavHeader = () => {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-items">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Other Sites
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Render My Invoice</a>
-                            <a class="dropdown-item" href="#">Save My Invoice</a>
+                            <a class="dropdown-item" href="/">Render My Invoice</a>
+                            <a class="dropdown-item" href="/">Save My Invoice</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">See Examples</a>
+                            <a class="dropdown-item" href="/">See Examples</a>
                         </div>
                     </li>
                     <li class="nav-item">
