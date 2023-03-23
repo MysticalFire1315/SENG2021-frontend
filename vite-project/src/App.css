@@ -1,0 +1,40 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+.header{
+    text-align: center;
+    margin: 10px;
+}
+
+.main-component{
+    text-align: center;
+    margin: 50px;
+}
+
+.footer{
+    text-align: center;
+    margin: 10px 5px;
+}
+
+.nav-items > li{
+    padding-left:20px;
+    padding-right:20px;
+}
+.nav-items >li:last-child {
+    position:absolute;
+    right: 20px;
+}
+
+.footer-items >li{
+    font-size: small;
+    padding-left: 20px;
+    padding-right:20px;
+}
+
+.navbar-brand{
+    margin-left: 1%;
+}
