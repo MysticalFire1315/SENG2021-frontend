@@ -15,9 +15,9 @@ body {
     margin: 50px;
 }
 
-.footer{
-    text-align: center;
-    margin: 10px 5px;
+.navbar-footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .nav-items > li{
