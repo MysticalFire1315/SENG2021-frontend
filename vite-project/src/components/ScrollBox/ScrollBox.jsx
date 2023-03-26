@@ -8,7 +8,7 @@ const boxVariant = {
     hidden: { opacity: 0, scale: 0 }
 };
 
-const Box = ({ num }) => {
+const BoxLeft = () => {
 
     const control = useAnimation();
     const [ref, inView] = useInView();
@@ -29,8 +29,39 @@ const Box = ({ num }) => {
             initial="hidden"
             animate={control}
         >
-            <h1>Box {num} </h1>
+            <div className="block-box-left">
+                <h1>Fact 1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsa. Iste accusamus a, magni est tenetur nam minus facilis necessitatibus blanditiis dignissimos expedita itaque corporis, possimus cumque et sint maxime!</p>
+            </div>
         </motion.div>
     );
 };
-export default Box;
+const BoxRight = () => {
+
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        } else {
+            control.start("hidden");
+        }
+    }, [control, inView]);
+
+    return (
+        <motion.div
+            className="box"
+            ref={ref}
+            variants={boxVariant}
+            initial="hidden"
+            animate={control}
+        >
+            <div className="block-box-right">
+                <h1>Fact 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laboriosam facilis, magnam odit repellat quaerat voluptatem ratione corporis earum quo recusandae. Doloremque veritatis quo, quis fugiat deleniti omnis quasi facere.</p>
+            </div>
+        </motion.div>
+    );
+};
+export { BoxLeft, BoxRight };

@@ -1,5 +1,4 @@
 import React from "react";
-import panel from "../../assets/panelcarousel.png";
 
 const Carousel = () => {
     return (
@@ -12,19 +11,16 @@ const Carousel = () => {
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src={panel} class="d-block w-100" alt="green panel" />
                     <div class="carousel-caption d-none d-md-block">
                         <h4>First slide</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src={panel} class="d-block w-100" alt="green panel" />
                     <div class="carousel-caption d-none d-md-block">
                         <h4>Second slide</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src={panel} class="d-block w-100" alt="green panel" />
                     <div class="carousel-caption d-none d-md-block">
                         <h4>Third slide</h4>
                     </div>

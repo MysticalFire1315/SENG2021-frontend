@@ -8,7 +8,7 @@ body {
 }
 
 #app{
-    background-color: #dfdfe2;
+    background-color: #eeeeee;
 }
 
 .header{
@@ -51,10 +51,19 @@ body {
     width: 30%;
     height: 300px;
 }
+
+.carousel-item{
+    border:1px solid rgb(106, 170, 10);
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    background-color:rgb(119, 199, 0);
+}
+
 .carousel-indicators {
     display: inline-block;
     position: absolute;
-    top: 450px;
+    top: 400px;
 }
 
 .carousel-control-prev-icon{
@@ -82,12 +91,29 @@ body {
 
 
 #invoice-box{
+    background-color: white;
     margin: auto;
     margin-bottom: 200px;
     margin-top: 50px;
-    width: 60%;
+    width: 1000px;
     height: 1500px;
     border: 1px solid black;
-    padding: 0px;
-    box-shadow: 1px 4px 4px -1px gray;
+    padding: 0px;                   /*subject to change*/
+    box-shadow: 1px 1px 8px 1px gray;
+}
+
+.block-box-left{
+    margin-left: 5%;
+    height: 300px;
+    width: 400px;
+    border:1px solid #333;
+    padding: 20px;
+}
+
+.block-box-right{
+    margin-left: 75%;
+    height: 300px;
+    width: 400px;
+    border:1px solid #333;
+    padding: 20px;
 }
