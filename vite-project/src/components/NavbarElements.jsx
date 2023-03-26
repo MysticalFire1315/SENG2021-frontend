@@ -3,7 +3,7 @@ import React from "react";
 const NavHeader = () => {
     return (
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="https://www.google.com/search?q=elegant&biw=2400&bih=1166&sxsrf=APwXEdeS44Y8U_hf51NB-N2vpX0rZMYDkg%3A1679812344919&ei=-OYfZPTcN-jg2roP2I2ryAk&ved=0ahUKEwj0uO7Q_Pj9AhVosFYBHdjGCpkQ4dUDCA8&uact=5&oq=elegant&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIKCAAQigUQsQMQQzINCAAQigUQsQMQgwEQQzINCAAQigUQsQMQgwEQQzIHCAAQigUQQzIHCAAQigUQQzIHCAAQigUQQzIHCAAQigUQQzIHCAAQigUQQzIHCAAQigUQQ0oECEEYAFAAWABgsgJoAHABeACAAdgBiAHYAZIBAzItMZgBAKABAqABAcABAQ&sclient=gws-wiz-serp">Elegant E-invoices</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@ const NavHeader = () => {
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Need Help?</a>
+                        <a class="nav-link" href="https://www.smh.com.au/">Need Help?</a>
                     </li>
                 </ul>
             </div>

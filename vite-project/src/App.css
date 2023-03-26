@@ -89,19 +89,6 @@ body {
     top: 230px;
 }
 
-
-#invoice-box{
-    background-color: white;
-    margin: auto;
-    margin-bottom: 200px;
-    margin-top: 50px;
-    width: 1000px;
-    height: 1500px;
-    border: 1px solid black;
-    padding: 0px;                   /*subject to change*/
-    box-shadow: 1px 1px 8px 1px gray;
-}
-
 .block-box-left{
     margin-left: 5%;
     height: 300px;
