@@ -24,7 +24,6 @@ function App() {
       <BoxRight />
       <InvoiceOptions />
       <Invoice />
-
       <Footer />
     </div>
   );

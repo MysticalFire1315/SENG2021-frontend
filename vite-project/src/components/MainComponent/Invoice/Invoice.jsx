@@ -34,8 +34,19 @@ const Invoice = () => {
                         <li>Cost</li>
                     </ul>
                 </div>
-                <div id="invoice-item">
+                <div className="invoice-item">
+                    <div className="item-name">
+                        testing
+                    </div>
+                    <div className="item-quantity">
 
+                    </div>
+                    <div className="item-description">
+
+                    </div>
+                    <div className="item-cost">
+
+                    </div>
                 </div>
             </div>
         </div>

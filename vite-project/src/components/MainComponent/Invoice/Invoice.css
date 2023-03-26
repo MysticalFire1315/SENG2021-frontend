@@ -41,9 +41,16 @@
 }
 
 #invoice-item-tab{
-    border: 1px solid black;
-    margin: 70px 30px 10px 30px;
-    padding: 5px;
+    border: 1px solid rgb(77, 77, 77);
+    margin: 70px 40px 10px 35px;
+    padding: 5px 2px 0px 2px;
+    background-color: rgb(77, 77, 77);
+    color: rgb(255, 255, 255);
+}
+
+.invoice-elements{
+    vertical-align: middle;
+    margin-bottom: 8px;
 }
 
 .invoice-elements > li{
@@ -55,8 +62,8 @@
     margin-left: 250px;
 }
 .invoice-elements > li:nth-child(3){
-    margin-left: 60px;
+    margin-left: 50px;
 }
 .invoice-elements > li:nth-child(4){
-    margin-left: 280px;
+    margin-left: 290px;
 }

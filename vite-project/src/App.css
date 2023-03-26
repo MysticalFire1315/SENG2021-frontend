@@ -98,6 +98,7 @@ body {
 }
 
 .block-box-right{
+    margin-top: 100px;
     margin-left: 75%;
     height: 300px;
     width: 400px;
