@@ -34,7 +34,7 @@ const Footer = () => {
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse footer-copyright" id="navbarNav">
                     <p>&copy; Elegant Builders 2023-2023</p>
                 </div>
             </nav>
