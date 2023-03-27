@@ -24,7 +24,7 @@ const NavHeader = () => {
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.smh.com.au/">Need Help?</a>
+                        <a class="nav-link" href="/need-help">Need Help?</a>
                     </li>
                 </ul>
             </div>
