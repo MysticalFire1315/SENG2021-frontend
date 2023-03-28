@@ -1,22 +1,19 @@
 import './App.css';
-import NavHeader from './components/NavbarElements';
-import Footer from "./components/Footer/Footer";
-
-import { Outlet } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import NeedHelp from './pages/NeedHelp';
+import Home from './pages/InvoiceCreate';
 function App() {
   return (
-    <div id="app">
-      <NavHeader />
-      <div id="detail">
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='need-help' element={<NeedHelp />} />
+      <Route path='*' element={<Navigate to='/' />} />
+    </Routes>
   );
 }
 
