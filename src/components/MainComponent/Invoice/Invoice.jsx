@@ -5,7 +5,7 @@ const Invoice = () => {
         <div id="invoice-box">
             <div id="invoice-title">
                 <h2>INVOICE</h2>
-                <p>1231241*TEST ID</p>
+                <p>TESTID:12570513571</p>
             </div>
             <div id="invoice-buyer">
                 <h4 className="invoice-headers">Buyer details</h4>
@@ -49,6 +49,11 @@ const Invoice = () => {
                             <input type="number" className="txtbgcolor" name="cost" placeholder="cost" aria-placeholder="cost" style={{ width: "70px", borderWidth: 0 }} />
                         </li>
                     </ul>
+                </div>
+                <div class="d-grid gap-2 col-6 ms-5">
+                    <button type="button" class="btn btn-sm" style={{
+                        textAlign: "left"
+                    }}>+ Add invoice line</button>
                 </div>
             </div>
         </div>
