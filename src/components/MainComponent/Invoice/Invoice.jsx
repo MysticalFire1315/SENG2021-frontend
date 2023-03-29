@@ -1,6 +1,14 @@
-import React from "react";
-
+import React, { useState } from "react";
+import InvoiceItem from "./InvoiceItem";
 const Invoice = () => {
+
+    const [items, setItem] = useState([<InvoiceItem key={0} />]);
+
+    const handleAddItem = (e) => {
+        e.preventDefault();
+        setItem([...items, <InvoiceItem key={items.length} />]);
+    };
+
     return (
         <div id="invoice-box">
             <div id="invoice-title">
@@ -34,26 +42,16 @@ const Invoice = () => {
                         <li>Cost</li>
                     </ul>
                 </div>
-                <div className="invoice-item">
-                    <ul className="invoice-element-value">
-                        <li className="item-name">
-                            <input type="text" className="txtbgcolor" name="item" placeholder="item" aria-placeholder="item" style={{ width: "255px", borderColor: "transparent" }} />
-                        </li>
-                        <li className="item-quantity">
-                            <input type="number" className="txtbgcolor" name="quantity" placeholder="quantity" aria-placeholder="quantity" style={{ width: "80px", borderWidth: 0 }} />
-                        </li>
-                        <li className="item-description">
-                            <input type="text" className="txtbgcolor" name="description" placeholder="description" aria-placeholder="description" style={{ width: "300px", borderWidth: 0 }} />
-                        </li>
-                        <li className="item-cost">
-                            <input type="number" className="txtbgcolor" name="cost" placeholder="cost" aria-placeholder="cost" style={{ width: "70px", borderWidth: 0 }} />
-                        </li>
-                    </ul>
-                </div>
+                <form name="item-details" id="item-form">
+                    {items}
+                </form>
                 <div class="d-grid gap-2 col-6 ms-5">
-                    <button type="button" class="btn btn-sm" style={{
-                        textAlign: "left"
+                    <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
+                        textAlign: "left", backgroundColor: "#DCDCDC"
                     }}>+ Add invoice line</button>
+                    <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
+                        textAlign: "right", backgroundColor: "#DCDCDC"
+                    }}>X</button>
                 </div>
             </div>
         </div>

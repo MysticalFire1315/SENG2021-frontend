@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import NeedHelp from './pages/NeedHelp';
 import Home from './pages/InvoiceCreate';
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
