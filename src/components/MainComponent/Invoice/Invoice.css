@@ -96,3 +96,16 @@ input{
     outline-style:dotted;
     /* border-bottom: 2px solid #1c87c9; */
 }
+
+.button-delete{
+    margin-left: 8px;
+    border-radius: 45%;
+    background-color: #c7c7c7;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border: transparent;
+    display: inline;
+}
+.button-delete:active{
+    color: rgb(235, 46, 46);
+}

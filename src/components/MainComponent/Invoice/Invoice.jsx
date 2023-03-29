@@ -1,13 +1,25 @@
 import React, { useState } from "react";
 import InvoiceItem from "./InvoiceItem";
+import { v4 as uuidv4 } from 'uuid';
 const Invoice = () => {
-
-    const [items, setItem] = useState([<InvoiceItem key={0} />]);
-
+    const [itemIds, setItemIds] = useState([]);
+    const [items, setItems] = useState([<InvoiceItem key={0} id={0} />]);
     const handleAddItem = (e) => {
         e.preventDefault();
-        setItem([...items, <InvoiceItem key={items.length} />]);
+        const itemId = uuidv4();
+        setItemIds([...itemIds, itemId]);
+        setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} />]);
     };
+    const handleRemoveItem = (id) => {
+        if (items.length <= 1) {
+            return;
+        }
+        const updatedItemIds = itemIds.filter(itemId => itemId !== id);
+        setItemIds(updatedItemIds);
+        const updatedItems = items.filter(item => item.props.id !== id);
+        setItems(updatedItems);
+    }
+
 
     return (
         <div id="invoice-box">
@@ -49,9 +61,6 @@ const Invoice = () => {
                     <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
                         textAlign: "left", backgroundColor: "#DCDCDC"
                     }}>+ Add invoice line</button>
-                    <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
-                        textAlign: "right", backgroundColor: "#DCDCDC"
-                    }}>X</button>
                 </div>
             </div>
         </div>

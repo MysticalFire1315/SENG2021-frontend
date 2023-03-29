@@ -1,6 +1,8 @@
 import React from "react";
-
-const InvoiceItem = () => {
+const InvoiceItem = ({ id, onRemove }) => {
+    const handleRemoveItem = () => {
+        onRemove(id);
+    }
     return (
         <div className="invoice-item">
             <ul className="invoice-element-value">
@@ -15,6 +17,9 @@ const InvoiceItem = () => {
                 </li>
                 <li className="item-cost">
                     <input type="number" className="txtbgcolor" name="cost" placeholder="cost" aria-placeholder="cost" style={{ width: "70px", borderWidth: 0 }} />
+                </li>
+                <li>
+                    <button type="button" className="button-delete" onClick={handleRemoveItem}>x</button>
                 </li>
             </ul>
         </div>
