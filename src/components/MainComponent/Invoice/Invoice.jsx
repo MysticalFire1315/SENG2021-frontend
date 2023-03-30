@@ -31,31 +31,129 @@ const Invoice = () => {
                 <h2>INVOICE</h2>
                 <p>TESTID:12570513571</p>
             </div>
-            <form>
-                <div id="invoice-buyer">
-                    <h4 className="invoice-headers">Buyer details</h4>
-                    <div class="row g-3 align-items-center" style={{ width: "200px", borderColor: "transparent" }}>
-                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Detail-1</label>
-                        <input type="text" class="form-control-sm form-text" id="invoice-detail-1" aria-labelledby="invoice-detail-1" placeholder="deet 1" />
-                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Detail-2</label>
-                        <input type="text" class="form-control-sm form-text" id="invoice-detail-2" aria-labelledby="invoice-detail-2" placeholder="deet 2" />
-                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Detail-3</label>
-                        <input type="text" class="form-control-sm form-text" id="invoice-detail-3" aria-labelledby="invoice-detail-3" placeholder="deet 3" />
+
+            <div id="invoice-buyer" className="invoice-init-values">
+                <h4 className="invoice-headers">Buyer details</h4>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Company</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
                     </div>
                 </div>
-                <div id="invoice-seller">
-                    <h4 className="invoice-headers">Seller details</h4>
-                    <p>Detail 1: Input 1</p>
-                    <p>Detail 2: Input 2</p>
-                    <p>Detail 3: Input 3</p>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Name</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
                 </div>
-                <div id="invoice-date">
-                    <h4 className="invoice-headers">Date details</h4>
-                    <p>Detail 1: Input 1</p>
-                    <p>Detail 2: Input 2</p>
-                    <p>Detail 3: Input 3</p>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Address</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
                 </div>
-            </form>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">City</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Country</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="invoice-seller" className="invoice-init-values">
+                <h4 className="invoice-headers">Seller details</h4>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Company</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Name</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Address</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">City</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Country</label>
+                    </div>
+                    <div class="col-sm-5" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+            </div>
+
+            <div id="invoice-date" className="invoice-init-values">
+                <h4 className="invoice-headers">Buyer details</h4>
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-date-details" class="col-sm-2 col-form-label">Date&nbsp;Due</label>
+                    </div>
+                    <div class="col-sm-6" className="init-details">
+                        <input type="date" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-date-details" class="col-sm-2 col-form-label">Date</label>
+                    </div>
+                    <div class="col-sm-6" className="init-details">
+                        <input type="date" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div className="init-details">
+                        <label for="invoice-date-details" class="col-sm-2 col-form-label">PO&nbsp;Number</label>
+                    </div>
+                    <div class="col-sm-6" className="init-details">
+                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                    </div>
+                </div>
+            </div>
+
             <div id="invoice-item-list">
                 <div id="invoice-item-tab">
                     <ul className="invoice-elements">
@@ -74,7 +172,29 @@ const Invoice = () => {
                     }}>+ Add invoice line</button>
                 </div>
             </div>
-        </div>
+            <div id="invoice-note">
+                <label for="invoice-notes">Notes</label>
+                <textarea className="note-text" class="form-control" placeholder="Detail any notes here" aria-label="invoice notes" />
+            </div>
+            <div id="invoice-final-details">
+                <div id="invoice-gross-amount">
+                    <label for="gross-amount">Gross Total</label>
+                    <div>100.00</div>
+                </div>
+                <div id="invoice-tax-amount">
+                    <label for="tax-amount">Tax Total</label>
+                    <input type="number" />
+                </div>
+                <div id="invoice-discount">
+                    <label for="discount-amount">Discount (%):</label>
+                    <input type="number" />
+                </div>
+                <div id="invoice-net-amount">
+                    <label for="net-amount">Net Total</label>
+                    <div>45.00</div>
+                </div>
+            </div>
+        </div >
     );
 }
 export default Invoice;

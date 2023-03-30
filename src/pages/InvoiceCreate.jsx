@@ -1,7 +1,6 @@
 import React from "react"
 
 import '../components/MainComponent/Invoice/Invoice.css';
-import '../components/MainComponent/Invoice/InvoiceOptions.css';
 
 import Header from "../components/Header/Header";
 import MainComponent from "../components/MainComponent/MainComponent";
