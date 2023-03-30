@@ -1,11 +1,31 @@
-import React from "react";
-
+import React, { useState } from "react";
+import InvoiceItem from "./InvoiceItem";
+import { v4 as uuidv4 } from 'uuid';
 const Invoice = () => {
+    const [itemIds, setItemIds] = useState([]);
+    const [items, setItems] = useState([<InvoiceItem key={0} id={0} />]);
+    const handleAddItem = (e) => {
+        e.preventDefault();
+        const itemId = uuidv4();
+        setItemIds([...itemIds, itemId]);
+        setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} />]);
+    };
+    const handleRemoveItem = (id) => {
+        if (items.length <= 1) {
+            return;
+        }
+        const updatedItemIds = itemIds.filter(itemId => itemId !== id);
+        setItemIds(updatedItemIds);
+        const updatedItems = items.filter(item => item.props.id !== id);
+        setItems(updatedItems);
+    }
+
+
     return (
         <div id="invoice-box">
             <div id="invoice-title">
                 <h2>INVOICE</h2>
-                <p>1231241*TEST ID</p>
+                <p>TESTID:12570513571</p>
             </div>
             <div id="invoice-buyer">
                 <h4 className="invoice-headers">Buyer details</h4>
@@ -34,19 +54,13 @@ const Invoice = () => {
                         <li>Cost</li>
                     </ul>
                 </div>
-                <div className="invoice-item">
-                    <div className="item-name">
-                        testing
-                    </div>
-                    <div className="item-quantity">
-
-                    </div>
-                    <div className="item-description">
-
-                    </div>
-                    <div className="item-cost">
-
-                    </div>
+                <form name="item-details" id="item-form">
+                    {items}
+                </form>
+                <div class="d-grid gap-2 col-6 ms-5">
+                    <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
+                        textAlign: "left", backgroundColor: "#DCDCDC"
+                    }}>+ Add invoice line</button>
                 </div>
             </div>
         </div>
