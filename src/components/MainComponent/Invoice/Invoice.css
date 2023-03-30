@@ -128,16 +128,35 @@ input{
 }
 
 #invoice-note{
+    position: relative;
     margin-left: 35px;
-    margin-top: 40px;
+    margin-top: -250px;
+    margin-bottom: 150px;
     width: 500px;
-}
-
-.note-text{
-    width: 500px;
-
 }
 
 #invoice-final-details{
-    display: inline;
+    font-weight: bold;
+    position: relative;
+    margin-left: 570px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#invoice-gross-amount, #invoice-tax-amount, #invoice-discount, #invoice-net-amount{
+    display: inline-flex;
+    text-align:center;
+    margin: 2px 0 2px 0;
+}
+.final-pad{
+    margin-right: 5px;
+}
+
+#invoice-footer{
+    position: relative;
+    font-size: smaller;
+    font-style: italic;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    margin-top: auto;
 }

@@ -1,7 +1,10 @@
 import React from "react";
-const InvoiceItem = ({ id, onRemove }) => {
+const InvoiceItem = (props) => {
     const handleRemoveItem = () => {
-        onRemove(id);
+        props.onRemove(props.id);
+    }
+    const addChange = () => {
+        props.calcGross();
     }
     return (
         <div className="invoice-item">
