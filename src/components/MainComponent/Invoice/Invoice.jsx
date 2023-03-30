@@ -3,17 +3,19 @@ import InvoiceItem from "./InvoiceItem";
 import { v4 as uuidv4 } from 'uuid';
 const Invoice = () => {
     const [itemIds, setItemIds] = useState([]);
-    const [items, setItems] = useState([<InvoiceItem key={0} id={0} />]);
+    const [items, setItems] = useState([]);
     const handleAddItem = (e) => {
         e.preventDefault();
         const itemId = uuidv4();
         setItemIds([...itemIds, itemId]);
         setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} />]);
+        console.log(itemIds);
     };
     const handleRemoveItem = (id) => {
-        if (items.length <= 1) {
+        if (items.length == 0) {
             return;
         }
+        console.log(itemIds);
         const updatedItemIds = itemIds.filter(itemId => itemId !== id);
         setItemIds(updatedItemIds);
         const updatedItems = items.filter(item => item.props.id !== id);
