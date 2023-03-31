@@ -163,8 +163,9 @@ input{
 
 #formFileSm{
     width: 200px;
+    margin: auto;
 }
 
 .fileInput{
-    margin-left: 25%;
+    margin: auto;
 }
