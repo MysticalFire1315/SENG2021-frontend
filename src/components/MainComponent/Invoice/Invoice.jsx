@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InvoiceItem from "./InvoiceItem";
+import InvoiceDetails from "./InvoiceDetails";
 import { v4 as uuidv4 } from 'uuid';
 const Invoice = () => {
     const [itemIds, setItemIds] = useState([]);
-    const [items, setItems] = useState([<InvoiceItem key={0} id={0} />]);
+    const [items, setItems] = useState([]);         // If there are no E-invoice items, the E-invoice validator must check there is at least 1 invoice line
+
+    useEffect(() => {
+        console.log(itemIds);
+    }, [itemIds]);
+
     const handleAddItem = (e) => {
         e.preventDefault();
         const itemId = uuidv4();
@@ -11,15 +17,19 @@ const Invoice = () => {
         setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} />]);
     };
     const handleRemoveItem = (id) => {
-        if (items.length <= 1) {
+        if (itemIds.length == 0) {
             return;
         }
-        const updatedItemIds = itemIds.filter(itemId => itemId !== id);
+        const updatedItemIds = (itemIds) => itemIds.filter(itemId => itemId !== id);
         setItemIds(updatedItemIds);
-        const updatedItems = items.filter(item => item.props.id !== id);
+        const updatedItems = (items) => items.filter(item => item.props.id !== id);
         setItems(updatedItems);
     }
-
+    const [total, setTotal] = useState(0);
+    // const calcGross = (value) => {
+    //     total += value;
+    //     setTotal(total);
+    // };
 
     return (
         <div id="invoice-box">
@@ -27,24 +37,7 @@ const Invoice = () => {
                 <h2>INVOICE</h2>
                 <p>TESTID:12570513571</p>
             </div>
-            <div id="invoice-buyer">
-                <h4 className="invoice-headers">Buyer details</h4>
-                <p>Detail 1: Input 1</p>
-                <p>Detail 2: Input 2</p>
-                <p>Detail 3: Input 3</p>
-            </div>
-            <div id="invoice-seller">
-                <h4 className="invoice-headers">Seller details</h4>
-                <p>Detail 1: Input 1</p>
-                <p>Detail 2: Input 2</p>
-                <p>Detail 3: Input 3</p>
-            </div>
-            <div id="invoice-date">
-                <h4 className="invoice-headers">Date details</h4>
-                <p>Detail 1: Input 1</p>
-                <p>Detail 2: Input 2</p>
-                <p>Detail 3: Input 3</p>
-            </div>
+            <InvoiceDetails />
             <div id="invoice-item-list">
                 <div id="invoice-item-tab">
                     <ul className="invoice-elements">
@@ -63,7 +56,38 @@ const Invoice = () => {
                     }}>+ Add invoice line</button>
                 </div>
             </div>
-        </div>
+            <div id="invoice-final-details">
+                <div id="invoice-gross-amount" class="row mb-1">
+                    <label for="gross-amount" class="col-sm-5 col-form-label">Gross&nbsp;Total</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" />
+                    </div>
+                </div>
+                <div id="invoice-tax-amount" class="row mb-1">
+                    <label for="tax-amount" class="col-sm-5 col-form-label">Tax&nbsp;Total</label>
+                    <div class="col-sm-5">
+                        <input type="number" class="form-control" />
+                    </div>
+                </div>
+                <div id="invoice-discount" class="row mb-1">
+                    <label for="discount-amount" class="col-sm-5 col-form-label">Discount&nbsp;(%)</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" />
+                    </div>
+                </div>
+                <div id="invoice-net-amount" class="row mb-1">
+                    <label for="net-amount" class="col-sm-5 col-form-label">Net&nbsp;Total</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div id="invoice-note">
+                <label for="invoice-notes">Notes</label>
+                <textarea name="textarea" rows="4" className="note-text" class="form-control" placeholder="Detail any notes here" aria-label="invoice notes" />
+            </div>
+            <div id="invoice-footer">Invoice formatted in accordance with A-NZ-PEPPOL-BIS-3.0 UBL XML rules</div>
+        </div >
     );
 }
 export default Invoice;
