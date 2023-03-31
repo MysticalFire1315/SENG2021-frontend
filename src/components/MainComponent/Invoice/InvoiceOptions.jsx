@@ -1,31 +1,25 @@
 import React from "react";
+import jsPDF from "jspdf";
 
 const InvoiceOptions = () => {
 
-    // Select the export button and invoice div
-    const exportBtn = document.querySelector("#export-btn");
-    const invoiceDiv = document.querySelector("#invoice-box");
+    const generatePDF = () => {
+        const report = new jsPDF('portrait', 'pt', 'A4');
+        report.html(document.querySelector('#invoice-box')).then(() => {
+            report.save('invoice.pdf');
+        });
 
-    // Add click event listener to the export button
-    exportBtn.addEventListener("click", () => {
-        // Initialize jsPDF
-        const doc = new jsPDF();
-
-        // Get the invoice div's HTML content
-        const html = invoiceDiv.innerHTML;
-
-        // Set the PDF's format and add the invoice HTML to it
-        doc.fromHTML(html, 15, 15, { width: 170 });
-
-        // Save the PDF with a filename including the current date and time
-        doc.save(`Invoice-${new Date().toLocaleString()}.pdf`);
-    });
+    }
 
     return (
         <div id="invoice-options">
-            <button id="export-button">Export My Invoice</button>
-            <button id="download-button">Download My Invoice</button>
+            <button type="button" onClick={generatePDF} id="export-button">Download My Invoice</button>
+            <button id="download-button">Preview My Invoice</button>
             <button id="save-button">Save My Invoice</button>
+            <div class="row" className="fileInput">
+                <label for="formFileSm" class="form-label">Input a file (JSON, YAML, XML)</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" />
+            </div>
         </div>
     );
 }

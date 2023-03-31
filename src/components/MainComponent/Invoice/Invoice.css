@@ -160,3 +160,11 @@ input{
     margin-bottom: 5px;
     margin-top: auto;
 }
+
+#formFileSm{
+    width: 200px;
+}
+
+.fileInput{
+    margin-left: 25%;
+}
