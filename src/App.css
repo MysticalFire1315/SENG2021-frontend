@@ -1,19 +1,25 @@
-body {
-  margin: 0px;
-  padding: 0px;
+.app {
+  background-color: #F2F1F0;
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
-  background-color: grey;
   color: #333;
-}
-
-.app {
-  background-color: #eeeeee;
 }
 
 .header {
   text-align: center;
-  margin: 10px;
+  margin: 70px;
+  font-weight: bolder;
+  color: #C0C0C0;
+}
+
+#darker-section{
+  background-color: #4F687F;
+  padding-bottom: 5px;
+}
+#info-section{
+  background-color: #C0C9CC;
+  padding-top: 5px;
+  padding-bottom: 50px;
 }
 
 .main-component {
@@ -43,50 +49,6 @@ body {
 
 .navbar-brand {
   margin-left: 1%;
-}
-
-#carouselExampleIndicators {
-  margin: auto;
-  margin-bottom: 300px;
-  width: 30%;
-  height: 300px;
-}
-
-.carousel-item {
-  border: 1px solid rgb(106, 170, 10);
-  border-radius: 50px;
-  width: 400px;
-  height: 400px;
-  background-color: rgb(119, 199, 0);
-}
-
-.carousel-indicators {
-  display: inline-block;
-  position: absolute;
-  top: 400px;
-}
-
-.carousel-control-prev-icon {
-  height: 50px;
-  width: 50px;
-  outline: black;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  position: absolute;
-  top: 230px;
-}
-.carousel-control-next-icon {
-  height: 50px;
-  width: 50px;
-  outline: black;
-  background-color: rgba(0, 0, 0, 0.3);
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
-  position: absolute;
-  top: 230px;
 }
 
 .block-box-left {

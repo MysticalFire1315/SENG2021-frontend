@@ -1,8 +1,8 @@
 import React from "react"
 
 import '../components/MainComponent/Invoice/Invoice.css';
-import '../components/MainComponent/Currency/Currency';
-
+import '../components/MainComponent/Currency/Currency.css';
+import '../components/Carousel/Carousel.css';
 
 import Header from "../components/Header/Header";
 import MainComponent from "../components/MainComponent/MainComponent";
@@ -12,19 +12,21 @@ import Invoice from '../components/MainComponent/Invoice/Invoice';
 import InvoiceOptions from '../components/MainComponent/Invoice/InvoiceOptions';
 import NavHeader from "../components/NavbarElements";
 import Footer from "../components/Footer/Footer";
-import Currency from "../components/MainComponent/Currency/Currency";
 const Home = () => {
     return (
         <div id="Home" className="app">
-            <NavHeader />
-            <Header />
-            <Carousel />
-            <MainComponent />
-            <BoxLeft />
-            <BoxRight />
+            <div id="darker-section">
+                <NavHeader />
+                <Header />
+                <Carousel />
+            </div>
+            <div id="info-section">
+                <MainComponent />
+                <BoxLeft />
+                <BoxRight />
+            </div>
             <InvoiceOptions />
             <Invoice />
-            <Currency />
             <Footer />
         </div>
     );

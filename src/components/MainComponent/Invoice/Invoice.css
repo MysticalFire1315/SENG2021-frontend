@@ -1,6 +1,7 @@
 #invoice-box{
     background-color: rgb(250, 250, 250);
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 200px;
     margin-top: 10px;
     width: 850px;

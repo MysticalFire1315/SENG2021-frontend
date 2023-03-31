@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import InvoiceItem from "./InvoiceItem";
 import InvoiceDetails from "./InvoiceDetails";
+import Currency from "../Currency/Currency";
 import { v4 as uuidv4 } from 'uuid';
 const Invoice = () => {
     const [itemIds, setItemIds] = useState([]);
@@ -25,11 +26,6 @@ const Invoice = () => {
         const updatedItems = (items) => items.filter(item => item.props.id !== id);
         setItems(updatedItems);
     }
-    const [total, setTotal] = useState(0);
-    // const calcGross = (value) => {
-    //     total += value;
-    //     setTotal(total);
-    // };
 
     return (
         <div id="invoice-box">
@@ -56,6 +52,8 @@ const Invoice = () => {
                     }}>+ Add invoice line</button>
                 </div>
             </div>
+            <Currency />
+
             <div id="invoice-final-details">
                 <div id="invoice-gross-amount" class="row mb-1">
                     <label for="gross-amount" class="col-sm-5 col-form-label">Gross&nbsp;Total</label>
