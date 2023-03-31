@@ -3,6 +3,7 @@ import React from "react"
 import '../components/MainComponent/Invoice/Invoice.css';
 import '../components/MainComponent/Currency/Currency.css';
 import '../components/Carousel/Carousel.css';
+import '../components/MainComponent/MainComponent.css';
 
 import Header from "../components/Header/Header";
 import MainComponent from "../components/MainComponent/MainComponent";

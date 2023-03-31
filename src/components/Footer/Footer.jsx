@@ -16,16 +16,16 @@ const Footer = () => {
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Place1</a>
+                            <a class="nav-link" href="https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0">E-invoice Rules</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Place2</a>
+                            <a class="nav-link" href="/need-help">Need Help?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Place3</a>
+                            <a class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Backend</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Place4</a>
+                            <a class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Frontend</a>
                         </li>
                     </ul>
                 </div>
