@@ -6,10 +6,10 @@ const Currency = () => {
             <div id="currency-box">
                 <label class="form-label">Choose a currency</label>
                 <div class="d-grid gap-2 d-md-block">
-                    <button type="button" class="btn btn-secondary btn-sm">USD ($)</button>
-                    <button type="button" class="btn btn-secondary btn-sm">AUD ($)</button>
-                    <button type="button" class="btn btn-secondary btn-sm">NZD ($)</button>
-                    <button type="button" class="btn btn-secondary btn-sm">EUR (&euro;)</button>
+                    <button type="button" class="btn btn-primary">USD ($)</button>
+                    <button type="button" class="btn btn-primary">AUD ($)</button>
+                    <button type="button" class="btn btn-primary">NZD ($)</button>
+                    <button type="button" class="btn btn-primary">EUR (&euro;)</button>
                 </div>
             </div>
         </>
