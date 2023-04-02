@@ -9,7 +9,7 @@ const Invoice = () => {
     const [itemIds, setItemIds] = useState([]);
     const [items, setItems] = useState([]);         // If there are no E-invoice items, the E-invoice validator must check there is at least 1 invoice line
     const [count, setCount] = useState(0);
-    const [data, setData] = useState({});
+    const [data, setData] = useState({ buyerelectronicaddressscheme: "0151", sellerelectronicaddressscheme: "0151", currency: "AUD" });
 
     const handleChange = (key, value) => {
         setData((data) => ({ ...data, [key]: value }));
@@ -40,7 +40,7 @@ const Invoice = () => {
         setCount(count + 1);
         setItemIds(itemIds => ([...itemIds, itemId]));
         setItems(items => ([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
-        // setData({ ...data, [`line${itemId}`]: { [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0", } });
+        setData(data => ({ ...data, [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0" }));
     };
     const handleRemoveItem = (id) => {
         if (itemIds.length == 0) {
@@ -50,6 +50,15 @@ const Invoice = () => {
         setItemIds(updatedItemIds);
         const updatedItems = (items) => items.filter(item => item.props.id !== id);
         setItems(updatedItems);
+
+        setData(data => {
+            const copy = { ...data };
+            delete copy[`name${id}`];
+            delete copy[`quantity${id}`];
+            delete copy[`description${id}`];
+            delete copy[`cost${id}`];
+            return copy;
+        });
     }
 
 

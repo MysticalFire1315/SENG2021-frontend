@@ -48,7 +48,7 @@ const InvoiceDetails = (props) => {
                 </div>
                 <div class="row">
                     <div className="init-details">
-                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
                         <input type="number" class="form-control form-control-sm form-text" placeholder="123456789" name="buyerelectronicaddress" onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />
@@ -56,18 +56,18 @@ const InvoiceDetails = (props) => {
                 </div>
                 <div class="row">
                     <div className="init-details">
-                        <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address&nbsp;Scheme</label>
+                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address&nbsp;Scheme</label>
                     </div>
-                    <select style={{ width: "90px" }}>
+                    <select style={{ width: "90px" }} name="buyerelectronicaddressscheme" onChange={handleChange}>
+                        <option value="0151">0151</option>
                         <option value="0002">0002</option>
-                        <option value="0002">0009</option>
-                        <option value="0002">0060</option>
-                        <option value="0002">0130</option>
-                        <option value="0002">0151</option>
-                        <option value="0002">0188</option>
-                        <option value="0002">0199</option>
-                        <option value="0002">9932</option>
-                        <option value="0002">9959</option>
+                        <option value="0009">0009</option>
+                        <option value="0060">0060</option>
+                        <option value="0130">0130</option>
+                        <option value="0188">0188</option>
+                        <option value="0199">0199</option>
+                        <option value="9932">9932</option>
+                        <option value="9959">9959</option>
                     </select>
                 </div>
                 <div class="row">
@@ -120,26 +120,31 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
                     </div>
-                    <select style={{ width: "90px" }}>
-                        <option value="0002">0002</option>
-                        <option value="0002">0009</option>
-                        <option value="0002">0060</option>
-                        <option value="0002">0130</option>
-                        <option value="0002">0151</option>
-                        <option value="0002">0188</option>
-                        <option value="0002">0199</option>
-                        <option value="0002">9932</option>
-                        <option value="0002">9959</option>
-                    </select>
+                    <div class="row">
+                        <div className="init-details">
+                            <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
+                        </div>
+                        <div class="col-sm-5" className="init-details">
+                            <input type="number" class="form-control form-control-sm form-text" placeholder="123456789" name="sellerelectronicaddress" onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row">
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address&nbsp;Scheme</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
-                        <input type="number" class="form-control form-control-sm form-text" placeholder="0151" name="sellerelectronicaddressscheme" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitBound(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
-                    </div>
+                    <select style={{ width: "90px" }} name="sellerelectronicaddressscheme" onChange={handleChange}>
+                        <option value="0151">0151</option>
+                        <option value="0002">0002</option>
+                        <option value="0009">0009</option>
+                        <option value="0060">0060</option>
+                        <option value="0130">0130</option>
+                        <option value="0188">0188</option>
+                        <option value="0199">0199</option>
+                        <option value="9932">9932</option>
+                        <option value="9959">9959</option>
+                    </select>
                 </div>
                 <div class="row">
                     <div className="init-details">
