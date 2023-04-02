@@ -31,9 +31,9 @@ const NeedHelp = () => {
           Formatting for Invoice IDs
         </h4>
         {showInvoiceIds && (
-          <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
+        <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
             To format an Invoice ID, click "Other Sites" and then "See examples" to view examples of an invoice. 
-          </p>
+        </p>
         )}
     </section>
 
@@ -42,11 +42,11 @@ const NeedHelp = () => {
           Navigating the Page
         </h4 >
         {showNavigation && (
-          <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
+        <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
             To navigate the page, you can use the navigation links at the top
             and bottom of the screen. Clicking "Home" will take you back to the
             home page, and the "Need Help?" link in the top right will take you to this page.
-          </p>
+        </p>
         )}
     </section>
 
@@ -55,9 +55,9 @@ const NeedHelp = () => {
           What does the PO number mean?
         </h4>
         {showPOnumber && (
-          <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
+        <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
            A PO number is a unique identifying number assigned to an Invoice. 
-          </p>
+        </p>
         )}
     </section>
 
@@ -66,9 +66,9 @@ const NeedHelp = () => {
           Rendering an invoice
         </h4>
         {showRender && (
-          <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
+        <p style={{ fontSize: "1rem", color: "#696969", marginBottom: "10px", paddingLeft: "10px" }}>
             Contents to render invoice
-          </p>
+        </p>
         )}
     </section>
     <Footer />
