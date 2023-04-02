@@ -10,7 +10,6 @@ import MainComponent from "../components/MainComponent/MainComponent";
 import Carousel from '../components/Carousel/Carousel';
 import { BoxLeft, BoxRight } from '../components/ScrollBox/ScrollBox';
 import Invoice from '../components/MainComponent/Invoice/Invoice';
-import InvoiceOptions from '../components/MainComponent/Invoice/InvoiceOptions';
 import NavHeader from "../components/NavbarElements";
 import Footer from "../components/Footer/Footer";
 const Home = () => {
@@ -26,7 +25,6 @@ const Home = () => {
                 <BoxLeft />
                 <BoxRight />
             </div>
-            <InvoiceOptions />
             <Invoice />
             <Footer />
         </div>

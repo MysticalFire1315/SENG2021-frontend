@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import InvoiceItem from "./InvoiceItem";
 import InvoiceDetails from "./InvoiceDetails";
 import Currency from "../Currency/Currency";
-
+import InvoiceOptions from './InvoiceOptions';
 import { v4 as uuidv4 } from 'uuid';        //Keep just in case i need it for later
 const Invoice = () => {
     const initialState = {
@@ -114,6 +114,7 @@ const Invoice = () => {
     // setItems(items => ([...items, <InvoiceItem key={0} id={0} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
     return (
         <div id="invoice-box">
+            <InvoiceOptions />
             <div id="invoice-title">
                 <h1>INVOICE</h1>
                 <label for="invoiceid" class="col-sm-5 col-form-label">Invoice ID</label>
@@ -126,7 +127,7 @@ const Invoice = () => {
                 </div>
             </div>
 
-            <InvoiceDetails onChange={handleChange} />
+            <InvoiceDetails onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />
 
             <div id="invoice-item-list">
                 <div id="invoice-item-tab">

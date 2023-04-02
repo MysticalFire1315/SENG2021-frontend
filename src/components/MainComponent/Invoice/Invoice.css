@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 200px;
-  margin-top: 10px;
+  margin-top: 160px;
   width: 850px;
   min-height: 1200px; /*subject to change from flexbox invoice items*/
   border: 1px solid black;
@@ -127,9 +127,11 @@ input {
 }
 
 #invoice-options {
+  position: absolute;
   margin: auto;
   text-align: center;
-  margin-top: 100px;
+  margin-top: -120px;
+  margin-left: 225px;
 }
 
 #invoice-note {
