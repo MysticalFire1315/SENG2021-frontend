@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react";
 import InvoiceItem from "./InvoiceItem";
 import InvoiceDetails from "./InvoiceDetails";
 import Currency from "../Currency/Currency";
-import { v4 as uuidv4 } from 'uuid';
+
+import { v4 as uuidv4 } from 'uuid';        //Keep just in case i need it for later
 const Invoice = () => {
+
     const [itemIds, setItemIds] = useState([]);
     const [items, setItems] = useState([]);         // If there are no E-invoice items, the E-invoice validator must check there is at least 1 invoice line
     const [count, setCount] = useState(0);
     const [data, setData] = useState({});
+
     const handleChange = (key, value) => {
         setData({ ...data, [key]: value });
     }
@@ -49,6 +52,7 @@ const Invoice = () => {
             e.preventDefault();
         }
     };
+
     const preventPasteNegative = (e) => {
         const clipboardData = e.clipboardData || window.clipboardData;
         const pastedData = parseFloat(clipboardData.getData('text'));
@@ -57,6 +61,7 @@ const Invoice = () => {
             e.preventDefault();
         }
     };
+
     // const percentBounds = (e) => {
     //     console.log(e.target.value);
     //     console.log(parseInt(e.target.value));
@@ -90,7 +95,7 @@ const Invoice = () => {
                 <div class="d-grid gap-2 col-6 ms-5">
                     <button onClick={handleAddItem} type="button" class="btn btn-sm" style={{
                         textAlign: "left", backgroundColor: "#DCDCDC"
-                    }}>+ Add invoice line</button>
+                    }}>+ Add Invoice Line</button>
                 </div>
             </div>
 
