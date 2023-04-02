@@ -30,6 +30,7 @@ const BoxLeft = () => {
             animate={control}
         >
             <div className="block-box-left">
+                <br></br>
                 <h1>Fact 1</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsa. Iste accusamus a, magni est tenetur nam minus facilis necessitatibus blanditiis dignissimos expedita itaque corporis, possimus cumque et sint maxime!</p>
             </div>
@@ -58,6 +59,7 @@ const BoxRight = () => {
             animate={control}
         >
             <div className="block-box-right">
+                <br></br>
                 <h1>Fact 2</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laboriosam facilis, magnam odit repellat quaerat voluptatem ratione corporis earum quo recusandae. Doloremque veritatis quo, quis fugiat deleniti omnis quasi facere.</p>
             </div>

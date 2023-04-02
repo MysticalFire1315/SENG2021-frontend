@@ -23,6 +23,15 @@ const NavHeader = () => {
                             <a class="dropdown-item" href="/">See Examples</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Behind The Scenes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</a>
+                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</a>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/need-help">Need Help?</a>
                     </li>

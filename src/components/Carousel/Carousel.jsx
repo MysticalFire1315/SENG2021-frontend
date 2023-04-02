@@ -3,7 +3,6 @@ import React from "react";
 const Carousel = () => {
     return (
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
-            <p>This is a carousel</p>
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -12,17 +11,28 @@ const Carousel = () => {
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-caption d-none d-md-block">
-                        <h4>First slide</h4>
+                        <h2>"I never thought that invoice transactions could be made so simple!"</h2>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <h4>Ada Lovelace</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption d-none d-md-block">
-                        <h4>Second slide</h4>
+                        <h2>"From creating invoices for me, letting me store them, saving them for later. What else can I say?"</h2>
+                        <br></br>
+                        <br></br>
+                        <h4>John Smith</h4>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption d-none d-md-block">
-                        <h4>Third slide</h4>
+                        <h2>"They always respond so quickly to any concerns I have. That's always great."</h2>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <h4>Bill Jones</h4>
                     </div>
                 </div>
             </div>
@@ -34,7 +44,6 @@ const Carousel = () => {
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-            <p>This is a carousel</p>
         </div>
     );
 
