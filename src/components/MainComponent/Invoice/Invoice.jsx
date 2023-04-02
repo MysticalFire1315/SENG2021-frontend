@@ -80,8 +80,15 @@ const Invoice = () => {
     return (
         <div id="invoice-box">
             <div id="invoice-title">
-                <h2>INVOICE</h2>
-                <p>TESTID:12570513571</p>
+                <h1>INVOICE</h1>
+                <label for="invoiceid" class="col-sm-5 col-form-label">Invoice ID</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" onChange={(e) => handleChange('invoiceid', e.target.value)} onPaste={preventPasteNegative} onKeyDown={preventMinus} min={0} />
+                </div>
+                <label for="buyerref" class="col-sm-8 col-form-label">Buyer Reference</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" onChange={(e) => handleChange('buyerref', e.target.value)} onPaste={preventPasteNegative} onKeyDown={preventMinus} min={0} />
+                </div>
             </div>
 
             <InvoiceDetails onChange={handleChange} />
