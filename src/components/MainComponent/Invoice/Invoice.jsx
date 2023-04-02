@@ -5,11 +5,34 @@ import Currency from "../Currency/Currency";
 
 import { v4 as uuidv4 } from 'uuid';        //Keep just in case i need it for later
 const Invoice = () => {
-
+    const initialState = {
+        buyercompany: "",
+        buyername: "",
+        buyeraddress: "",
+        electronicaddress: "11111111111",
+        buyerelectronicaddressscheme: "0151",
+        buyercity: "",
+        buyercountry: "",
+        sellercompany: "",
+        sellername: "",
+        selleraddress: "",
+        sellerelectronicaddress: "",
+        sellerelectronicaddressscheme: "0151",
+        sellercity: "",
+        sellercountry: "",
+        buyerreference: "",
+        currency: "AUD",
+        duedate: "1970-01-01",
+        issuedate: "1970-01-02",
+        grossamount: "0",
+        taxamount: "0",
+        discount: "0",
+        nettotal: "0"
+    };
     const [itemIds, setItemIds] = useState([]);
     const [items, setItems] = useState([]);         // If there are no E-invoice items, the E-invoice validator must check there is at least 1 invoice line
     const [count, setCount] = useState(0);
-    const [data, setData] = useState({ buyerelectronicaddressscheme: "0151", sellerelectronicaddressscheme: "0151", currency: "AUD" });
+    const [data, setData] = useState(initialState);
 
     const handleChange = (key, value) => {
         setData((data) => ({ ...data, [key]: value }));
@@ -98,7 +121,7 @@ const Invoice = () => {
                 </div>
                 <label for="buyerref" class="col-sm-8 col-form-label">Buyer Reference</label>
                 <div class="col-sm-8">
-                    <input type="number" class="form-control" onChange={(e) => handleChange('buyerref', e.target.value)} onPaste={preventPasteNegative} onKeyDown={preventMinus} min={0} />
+                    <input type="string" class="form-control" onChange={(e) => handleChange('buyerref', e.target.value)} onPaste={preventPasteNegative} onKeyDown={preventMinus} />
                 </div>
             </div>
 
