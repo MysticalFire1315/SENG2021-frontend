@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Currency = (props) => {
-    const [selectedCurrency, setSelectedCurrency] = useState("AUD");
+    const [selectedCurrency, setSelectedCurrency] = useState();
     const selectCurrency = e => {
         setSelectedCurrency(e.target.value);
         props.onChange('currency', e.target.value);

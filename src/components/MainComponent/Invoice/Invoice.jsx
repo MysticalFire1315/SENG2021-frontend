@@ -12,12 +12,17 @@ const Invoice = () => {
     const [data, setData] = useState({});
 
     const handleChange = (key, value) => {
-        setData({ ...data, [key]: value });
+        setData((data) => ({ ...data, [key]: value }));
     }
 
-    const handlePercentChange = (e, key, value) => {
-        console.log(data['discount']);
-        console.log(value);
+    // const handleChangeItem = (id, key, value) => {
+    //     const temp = data[`line${id}`];
+    //     // temp[key] = value;
+    //     console.log("here" + temp + JSON.stringify(data));
+    //     setData({ ...data, [`line${id}`]: temp });
+    // }
+
+    const handlePercentChange = (key, value) => {
         if (value > 100) {
             setData({ ...data, [key]: data['discount'] });
         } else {
@@ -35,6 +40,7 @@ const Invoice = () => {
         setCount(count + 1);
         setItemIds([...itemIds, itemId]);
         setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]);
+        // setData({ ...data, [`line${itemId}`]: { [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0", } });
     };
     const handleRemoveItem = (id) => {
         if (itemIds.length == 0) {
@@ -117,7 +123,7 @@ const Invoice = () => {
                 <div id="invoice-discount" class="row mb-1">
                     <label for="discount-amount" class="col-sm-6 col-form-label">Discount:(%)</label>
                     <div class="col-sm-6">
-                        <input type="number" class="form-control" onChange={(e) => { handlePercentChange(e, 'discount', e.target.value) }} onPaste={preventPasteNegative} onKeyDown={(e) => { preventMinus(e) }} min={0} max={100} />
+                        <input type="number" class="form-control" onChange={(e) => { handlePercentChange('discount', e.target.value) }} onPaste={preventPasteNegative} onKeyDown={(e) => { preventMinus(e) }} min={0} max={100} />
                     </div>
                 </div>
                 <div id="invoice-net-amount" class="row mb-1">

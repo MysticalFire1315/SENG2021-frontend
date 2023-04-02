@@ -106,6 +106,7 @@ input{
 .txtbgcolor:focus{
     outline-color: rgb(236, 180, 60);
     outline-style:dotted;
+    border-radius: 10px;
     /* border-bottom: 2px solid #1c87c9; */
 }
 
