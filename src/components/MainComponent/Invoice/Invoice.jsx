@@ -57,14 +57,14 @@ const Invoice = () => {
             e.preventDefault();
         }
     };
-    const percentBounds = (e) => {
-        console.log(e.target.value);
-        console.log(parseInt(e.target.value));
+    // const percentBounds = (e) => {
+    //     console.log(e.target.value);
+    //     console.log(parseInt(e.target.value));
 
-        if (parseInt(e.target.value) > 100) {
-            e.preventDefault();
-        }
-    }
+    //     if (parseInt(e.target.value) > 100) {
+    //         e.preventDefault();
+    //     }
+    // }
 
     return (
         <div id="invoice-box">
