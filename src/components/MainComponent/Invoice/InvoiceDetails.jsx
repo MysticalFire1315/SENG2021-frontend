@@ -1,5 +1,10 @@
 import React from 'react';
-const InvoiceDetails = () => {
+const InvoiceDetails = (props) => {
+
+    const handleChange = (event) => {
+        props.onChange(event.target.name, event.target.value);
+    }
+
     return (
         <>
             <div id="invoice-buyer" className="invoice-init-values">
@@ -9,7 +14,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Company</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="company" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="company" name="buyercompany" onChange={handleChange} />
                     </div>
                 </div>
 
@@ -18,7 +23,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Name</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="name" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="name" name="buyername" onChange={handleChange} />
                     </div>
                 </div>
 
@@ -27,7 +32,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Address</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="address" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="address" name="buyeraddress" onChange={handleChange} />
                     </div>
                 </div>
                 <div class="row">
@@ -35,7 +40,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">City</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="city" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="city" name="buyercity" onChange={handleChange} />
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +48,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Country</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="country" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="country" name="buyercountry" onChange={handleChange} />
                     </div>
                 </div>
             </div>
@@ -55,7 +60,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Company</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="company" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="company" name="sellercompany" onChange={handleChange} />
                     </div>
                 </div>
 
@@ -64,7 +69,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Name</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="name" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="name" name="sellername" onChange={handleChange} />
                     </div>
                 </div>
 
@@ -73,7 +78,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Address</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="address" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="address" name="selleraddress" onChange={handleChange} />
                     </div>
                 </div>
                 <div class="row">
@@ -81,7 +86,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">City</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="city" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="city" name="sellercity" onChange={handleChange} />
                     </div>
                 </div>
                 <div class="row">
@@ -89,7 +94,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Country</label>
                     </div>
                     <div class="col-sm-5" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="country" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="country" name="sellercountry" onChange={handleChange} />
                     </div>
                 </div>
             </div>
@@ -101,7 +106,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-date-details" class="col-sm-2 col-form-label">Date&nbsp;Due</label>
                     </div>
                     <div class="col-sm-6" className="init-details">
-                        <input type="date" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                        <input type="date" class="form-control form-control-sm form-text" name="datedue" onChange={handleChange} min={0} />
                     </div>
                 </div>
 
@@ -110,7 +115,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-date-details" class="col-sm-2 col-form-label">Date</label>
                     </div>
                     <div class="col-sm-6" className="init-details">
-                        <input type="date" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="deet 1" />
+                        <input type="date" class="form-control form-control-sm form-text" name="date" onChange={handleChange} min={0} />
                     </div>
                 </div>
 
@@ -119,7 +124,7 @@ const InvoiceDetails = () => {
                         <label for="invoice-date-details" class="col-sm-2 col-form-label">PO&nbsp;Number</label>
                     </div>
                     <div class="col-sm-6" className="init-details">
-                        <input type="text" class="form-control form-control-sm form-text" aria-label="invoice-detail-1" placeholder="123456" />
+                        <input type="text" class="form-control form-control-sm form-text" placeholder="123456789" name="POnumber" onChange={handleChange} min={0} />
                     </div>
                 </div>
             </div>
