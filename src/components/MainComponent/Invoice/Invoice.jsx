@@ -24,9 +24,9 @@ const Invoice = () => {
 
     const handlePercentChange = (key, value) => {
         if (value > 100) {
-            setData({ ...data, [key]: data['discount'] });
+            setData((data) => ({ ...data, [key]: data['discount'] }));
         } else {
-            setData({ ...data, [key]: value });
+            setData((data) => ({ ...data, [key]: value }));
         }
     }
 
@@ -38,8 +38,8 @@ const Invoice = () => {
         e.preventDefault();
         const itemId = count;
         setCount(count + 1);
-        setItemIds([...itemIds, itemId]);
-        setItems([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]);
+        setItemIds(itemIds => ([...itemIds, itemId]));
+        setItems(items => ([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
         // setData({ ...data, [`line${itemId}`]: { [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0", } });
     };
     const handleRemoveItem = (id) => {
@@ -77,6 +77,8 @@ const Invoice = () => {
     //     }
     // }
 
+    // setItemIds(itemIds => ([...itemIds, 0]));
+    // setItems(items => ([...items, <InvoiceItem key={0} id={0} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
     return (
         <div id="invoice-box">
             <div id="invoice-title">
