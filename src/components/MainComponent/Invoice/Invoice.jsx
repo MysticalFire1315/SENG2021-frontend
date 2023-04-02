@@ -63,7 +63,7 @@ const Invoice = () => {
         setCount(count + 1);
         setItemIds(itemIds => ([...itemIds, itemId]));
         setItems(items => ([...items, <InvoiceItem key={itemId} id={itemId} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
-        setData(data => ({ ...data, [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0" }));
+        setData(data => ({ ...data, [`name${itemId}`]: "item", [`quantity${itemId}`]: "0", [`unitcode${itemId}`]: "C62", [`description${itemId}`]: "item description", [`cost${itemId}`]: "0" }));
     };
     const handleRemoveItem = (id) => {
         if (itemIds.length == 0) {
@@ -78,6 +78,7 @@ const Invoice = () => {
             const copy = { ...data };
             delete copy[`name${id}`];
             delete copy[`quantity${id}`];
+            delete copy[`unitcode${id}`];
             delete copy[`description${id}`];
             delete copy[`cost${id}`];
             return copy;
@@ -132,6 +133,7 @@ const Invoice = () => {
                     <ul className="invoice-elements">
                         <li>Item</li>
                         <li>Quantity</li>
+                        <li>Unit</li>
                         <li>Description</li>
                         <li>Cost</li>
                     </ul>

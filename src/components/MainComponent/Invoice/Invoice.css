@@ -74,10 +74,13 @@
   margin-left: 220px;
 }
 .invoice-elements > li:nth-child(3) {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .invoice-elements > li:nth-child(4) {
-  margin-left: 220px;
+  margin-left: 50px;
+}
+.invoice-elements > li:nth-child(5) {
+  margin-left: 160px;
 }
 
 .invoice-element-value > li {
