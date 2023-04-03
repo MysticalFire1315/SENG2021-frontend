@@ -2,12 +2,12 @@ import Head from 'next/head'
 
 import '../styles/styles.css'
 
-import '../styles/Carousel.module.css'
-import '../styles/Currency.module.css'
-import '../styles/Footer.module.css'
-import '../styles/Header.module.css'
-import '../styles/MainComponent.module.css'
-import '../styles/Invoice.module.css'
+import '../styles/Carousel.css'
+import '../styles/Currency.css'
+import '../styles/Footer.css'
+import '../styles/Header.css'
+import '../styles/MainComponent.css'
+import '../styles/Invoice.css'
 import "bootstrap/dist/css/bootstrap.min.css" // Import bootstrap CSS
 import { useEffect } from "react";
 // Scrollbox css is in main
