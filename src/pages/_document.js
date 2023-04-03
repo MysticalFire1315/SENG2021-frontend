@@ -4,11 +4,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
       <body>
         <div id="root"></div>
-        <script type="module" src="./_app.js" async />
+        <script type="module" src="app.js" async />
         <Main />
         <NextScript />
       </body>
