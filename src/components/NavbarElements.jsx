@@ -28,12 +28,12 @@ const NavHeader = () => {
                             Behind The Scenes
                         </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</a>
-                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</a>
+                            <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</Link>
+                            <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</Link>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/need-help">Need Help?</a>
+                        <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
                     </li>
                 </ul>
             </div>
