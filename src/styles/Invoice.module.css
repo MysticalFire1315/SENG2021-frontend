@@ -101,7 +101,7 @@
   margin-left: 15px;
 }
 
-input {
+.invoice-item input {
   padding: 5px;
   margin: 5px 0;
   border-width: 0;

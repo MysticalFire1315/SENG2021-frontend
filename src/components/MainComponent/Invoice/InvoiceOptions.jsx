@@ -1,5 +1,5 @@
 import React from "react";
-import { invoiceCreate, invoiceRender } from "../../../backend.js";
+import { invoiceCreate, invoiceRender } from "../../../pages/api/backend";
 
 const InvoiceOptions = (props) => {
     const data = props.data;

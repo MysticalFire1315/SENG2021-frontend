@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header class="header">
             <h1>Elegant Builders</h1>
-            <p>Bringing the responsive E-invoice creation service directly into the professional's hands...</p>
+            <p>Bringing the responsive E-invoice creation service directly into the professional&apos;s hands...</p>
         </header>
     );
 }

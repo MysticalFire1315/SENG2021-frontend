@@ -3,7 +3,6 @@ import InvoiceItem from "./InvoiceItem";
 import InvoiceDetails from "./InvoiceDetails";
 import Currency from "../Currency/Currency";
 import InvoiceOptions from './InvoiceOptions';
-import { v4 as uuidv4 } from 'uuid';        //Keep just in case i need it for later
 const Invoice = () => {
     const initialState = {
         buyercompany: "",

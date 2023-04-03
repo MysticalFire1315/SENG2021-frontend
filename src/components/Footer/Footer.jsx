@@ -1,5 +1,5 @@
 import React from "react"
-
+import Link from "next/link";
 const Footer = () => {
     return (
         <footer className="footer">
@@ -10,22 +10,22 @@ const Footer = () => {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav footer-items">
                         <li class="nav-item active">
-                            <a class="nav-link" href="https://www.google.com/">Google</a>
+                            <Link class="nav-link" href="https://www.google.com/">Google</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
+                            <Link class="nav-link" href="/">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0">E-invoice Rules</a>
+                            <Link class="nav-link" href="https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0">E-invoice Rules</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/need-help">Need Help?</a>
+                            <Link class="nav-link" href="/need-help">Need Help?</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Backend</a>
+                            <Link class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Backend</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Frontend</a>
+                            <Link class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Frontend</Link>
                         </li>
                     </ul>
                 </div>
