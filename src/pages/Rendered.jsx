@@ -9,6 +9,11 @@ export default function Rendered() {
         <title>Elegant Invoice</title>
       </Head>
       <NavHeader />
+      <h1 style={{ textAlign: "center" }}>Rendered invoice will only be shown below if E-invoice is created</h1>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       {/* This sets the html directly */}
       <div dangerouslySetInnerHTML={{ __html: typeof window !== 'undefined' ? localStorage.getItem('rawHtml') : null }}></div>
       <Footer />

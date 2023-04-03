@@ -17,8 +17,9 @@ const NavHeader = () => {
                             Other Sites
                         </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link class="dropdown-item" href="/">Render My Invoice</Link>
-                            <Link class="dropdown-item" href="/">Save My Invoice</Link>
+                            <Link class="dropdown-item" href="/">About Us</Link>
+                            <Link class="dropdown-item" href="/">Check Stored Invoices</Link>
+                            <Link class="dropdown-item" href="/">Create An Invoice!</Link>
                             <div class="dropdown-divider"></div>
                             <Link class="dropdown-item" href="/">See Examples</Link>
                         </div>
@@ -31,6 +32,9 @@ const NavHeader = () => {
                             <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</Link>
                             <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</Link>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/Rendered">See Rendered Invoice</Link>
                     </li>
                     <li class="nav-item">
                         <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
