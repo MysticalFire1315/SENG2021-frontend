@@ -32,7 +32,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Company</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="company" name="buyercompany" onChange={handleChange} />
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Name</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="name" name="buyername" onChange={handleChange} />
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Address</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="address" name="buyeraddress" onChange={handleChange} />
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="number" class="form-control form-control-sm form-text" placeholder="123456789" name="buyerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
                     </div>
                 </div>
@@ -82,7 +82,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">City</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="city" name="buyercity" onChange={handleChange} />
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Country</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="country" name="buyercountry" onChange={handleChange} />
                     </div>
                 </div>
@@ -102,7 +102,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Company</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="company" name="sellercompany" onChange={handleChange} />
                     </div>
                 </div>
@@ -111,7 +111,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Name</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="name" name="sellername" onChange={handleChange} />
                     </div>
                 </div>
@@ -120,7 +120,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Address</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="address" name="selleraddress" onChange={handleChange} />
                     </div>
                 </div>
@@ -128,7 +128,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Electronic&nbsp;Address</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="number" class="form-control form-control-sm form-text" placeholder="123456789" name="sellerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
                     </div>
                 </div>
@@ -153,7 +153,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">City</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="city" name="sellercity" onChange={handleChange} />
                     </div>
                 </div>
@@ -161,7 +161,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-seller-details" class="col-sm-2 col-form-label">Country</label>
                     </div>
-                    <div class="col-sm-5" className="init-details">
+                    <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="country" name="sellercountry" onChange={handleChange} />
                     </div>
                 </div>
@@ -173,7 +173,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-date-details" class="col-sm-2 col-form-label">Due&nbsp;Date</label>
                     </div>
-                    <div class="col-sm-6" className="init-details">
+                    <div class="col-sm-7" className="init-details">
                         <input type="date" class="form-control form-control-sm form-text" name="duedate" onChange={handleChange} />
                     </div>
                 </div>
@@ -182,7 +182,7 @@ const InvoiceDetails = (props) => {
                     <div className="init-details">
                         <label for="invoice-date-details" class="col-sm-2 col-form-label">Issue&nbsp;Date</label>
                     </div>
-                    <div class="col-sm-6" className="init-details">
+                    <div class="col-sm-7" className="init-details">
                         <input type="date" class="form-control form-control-sm form-text" name="issuedate" onChange={handleChange} />
                     </div>
                 </div>
