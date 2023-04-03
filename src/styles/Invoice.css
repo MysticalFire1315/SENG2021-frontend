@@ -20,13 +20,13 @@
 }
 
 .invoice-init-values {
-  display: table-cell;
+  display: inline-block;
 }
-
+/* TODO
 .init-details {
-  width: max-content;
-  text-align: left;
-}
+  display: table-cell;
+  width: 600px;
+} */
 
 #invoice-title {
   position: absolute;
@@ -36,12 +36,14 @@
 
 #invoice-buyer {
   position: inherit;
+  width: 450px;
   margin-left: 70px;
   margin-top: 100px;
 }
 
 #invoice-seller {
   position: inherit;
+  width: 450px;
   margin-left: 70px;
   margin-top: 60px;
 }
@@ -145,9 +147,10 @@
 #invoice-final-details {
   font-weight: bold;
   position: relative;
-  margin-left: 570px;
+  margin-left: 550px;
   margin-top: 60px;
   margin-bottom: 50px;
+  width: 300px;
 }
 
 #invoice-gross-amount,
