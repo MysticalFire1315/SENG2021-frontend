@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import NavHeader from "../components/NavbarElements";
 import Footer from "../components/Footer/Footer";
+import Head from 'next/head'
 
-const NeedHelp = () => {
+export default function NeedHelp() {
   const [showInvoiceIds, setShowInvoiceIds] = useState(false);
   const [showNavigation, setShowNavigation] = useState(false);
   const [showPOnumber, setShowPOnumber] = useState(false);
@@ -10,6 +11,10 @@ const NeedHelp = () => {
 
   return (
     <div id="NeedHelp" className="app">
+      <Head>
+        <title>Need Help?</title>
+      </Head>
+      <NavHeader />
       <div style={{ padding: "10px", }}></div>
       <section>
         <h1 style={{ fontSize: "2.5rem", fontWeight: "bold", color: "#255", paddingLeft: "30px" }}>
@@ -70,8 +75,7 @@ const NeedHelp = () => {
           </p>
         )}
       </section>
+      <Footer />
     </div>
   );
 };
-
-export default NeedHelp;

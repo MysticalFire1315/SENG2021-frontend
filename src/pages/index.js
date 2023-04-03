@@ -19,6 +19,9 @@ import Footer from '@/components/Footer/Footer'
 export default function Home() {
   return (
     <div id="Home" className="app">
+      <Head>
+        <title>Elegant E-invoices</title>
+      </Head>
       <div id="darker-section">
         <NavHeader />
         <Header />
