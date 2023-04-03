@@ -10,7 +10,7 @@ export default function Rendered() {
       </Head>
       <NavHeader />
       {/* This sets the html directly */}
-      <div dangerouslySetInnerHTML={{ __html: localStorage.getItem('rawHtml') }}></div>
+      <div dangerouslySetInnerHTML={{ __html: typeof window !== 'undefined' ? localStorage.getItem('rawHtml') : null }}></div>
       <Footer />
     </div>
   );
