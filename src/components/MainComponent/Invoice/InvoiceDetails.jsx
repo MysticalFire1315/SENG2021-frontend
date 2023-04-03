@@ -30,7 +30,7 @@ const InvoiceDetails = (props) => {
                 <h4 className="invoice-headers">Buyer details</h4>
                 <div class="row">
                     <div className="init-details">
-                        <label for="invoice-buyer-details" class="col-sm-2 col-form-label">Company</label>
+                        <label for="invoice-buyer-details" class="col-sm-1 col-form-label">Company</label>
                     </div>
                     <div class="col-sm-3" className="init-details">
                         <input type="text" class="form-control form-control-sm form-text" placeholder="company" name="buyercompany" onChange={handleChange} />

@@ -177,9 +177,9 @@ const Invoice = () => {
                 </div>
             </div>
             <div id="invoice-note">
-                <label for="floatingTextarea2">Notes</label>
-                <div class="form-floating">
-                    <textarea name="textarea" rows="4" className="note-text" class="form-control" id="floatingTextarea2" placeholder="Detail any notes here" aria-label="invoice notes" onChange={(e) => handleChange('notes', e.target.value)} />
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text">Notes</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
             </div>
             <div id="invoice-footer">Invoice formatted in accordance with A-NZ-PEPPOL-BIS-3.0 UBL XML rules</div>
