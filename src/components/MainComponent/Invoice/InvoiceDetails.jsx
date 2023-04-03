@@ -147,17 +147,17 @@ const InvoiceDetails = (props) => {
 
             <div id="invoice-date" className="invoice-init-values">
                 <h4 className="invoice-headers">Other details</h4>
-                <div class="row mb-2">
-                    <label for="invoice-date-details" class="col-sm-2 col-form-label-sm">Issue&nbsp;Date</label>
-                    <div class="col-sm-7">
+                <div class="row mb-3">
+                    <label for="invoice-date-details">Issue&nbsp;Date</label>
+                    <div class="col-sm-7 mt-2">
                         <input type="date" class="form-control-sm" name="issuedate" onChange={handleChange} />
                     </div>
                 </div>
 
 
-                <div class="row mb-2">
-                    <label for="invoice-date-details" class="col-sm-2 col-form-label-sm">Due&nbsp;Date</label>
-                    <div class="col-sm-7">
+                <div class="row mb-3">
+                    <label for="invoice-date-details">Due&nbsp;Date</label>
+                    <div class="col-sm-7 mt-2">
                         <input type="date" class="form-control-sm" name="duedate" onChange={handleChange} />
                     </div>
                 </div>
