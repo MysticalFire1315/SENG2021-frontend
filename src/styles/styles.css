@@ -8,18 +8,26 @@
 .header {
   text-align: center;
   margin: 70px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bolder;
-  color: #c0c0c0;
+  color: #3884fd;
 }
 
 #darker-section {
-  background-color: #4f687f;
+  background-color: whitesmoke;
   padding-bottom: 5px;
 }
 #info-section {
   background-color: #c0c9cc;
   padding-top: 5px;
   padding-bottom: 50px;
+}
+
+
+Modify the background color
+.carousel-custom {
+    background-color: rgb(52, 57, 83);
+    color:rgb(52, 57, 83);
 }
 
 .navbar-footer {
