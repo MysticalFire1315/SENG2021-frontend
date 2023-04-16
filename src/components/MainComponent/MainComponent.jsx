@@ -1,8 +1,9 @@
 import React from "react";
+import Image from "next/image";
 const MainComponent = () => {
     return (
         <main className="main-component">
-            <img src="/src/assets/invoice.png" alt="invoice.png" width={200} style={{ marginBottom: "40px" }} />
+            <Image src="/invoice.png" alt="invoice.png" width={200} height={200} style={{ marginBottom: "40px" }} />
             <div id="main-text">
                 <h3 >The Simple Solution for SMP Business & Clients Invoice Generation</h3>
                 <br></br>
@@ -16,7 +17,7 @@ const MainComponent = () => {
                 <br></br>
                 <h3>Free, Convenient, Fit For The Eyes</h3>
                 <br></br>
-                <p>Those of us at Elegant Builders understand that what people are looking for in an E-invoice tool isn't the wide assortment of features that so many find online, but a return to the basics, displaying only the necessary information. So we developed a tool that could be easily understood without having to worry about the semantics. And not a dime needs to be spent!</p>
+                <p>Those of us at Elegant Builders understand that what people are looking for in an E-invoice tool isn&apos;t the wide assortment of features that so many find online, but a return to the basics, displaying only the necessary information. So we developed a tool that could be easily understood without having to worry about the semantics. And not a dime needs to be spent!</p>
                 <br></br>
                 <br></br>
                 <h3>Have Any Questions?</h3>

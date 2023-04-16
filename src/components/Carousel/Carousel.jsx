@@ -2,8 +2,8 @@ import React from "react";
 
 const Carousel = () => {
     return (
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
-            <div class="carousel-indicators">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade carousel-dark" data-bs-ride="true">
+            <div class="carousel-indicators carousel-custom">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -11,28 +11,40 @@ const Carousel = () => {
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>"I never thought that invoice transactions could be made so simple!"</h2>
+                        <h3 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode"
+                        }}>&quot;I never thought that invoice transactions could be made so simple!&quot;</h3>
                         <br></br>
                         <br></br>
                         <br></br>
-                        <h4>Ada Lovelace</h4>
+                        <h5 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode"
+                        }}>Ada Lovelace</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>"From creating invoices for me, letting me store them, saving them for later. What else can I say?"</h2>
+                        <h3 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode"
+                        }}>&quot;From creating invoices for me, letting me store them, saving them for later. What else can I say?&quot;</h3>
                         <br></br>
                         <br></br>
-                        <h4>John Smith</h4>
+                        <h5 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode"
+                        }}>John Smith</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>"They always respond so quickly to any concerns I have. That's always great."</h2>
+                        <h3 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode"
+                        }}>&quot;They always respond so quickly to any concerns I have. That&apos;s always great.&quot;</h3>
                         <br></br>
                         <br></br>
                         <br></br>
-                        <h4>Bill Jones</h4>
+                        <h5 style={{
+                            color: "#243762", fontFamily: "Trebuchet MS, Lucida Sans Unicode",
+                        }}>Bill Jones</h5>
                     </div>
                 </div>
             </div>

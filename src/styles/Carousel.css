@@ -1,16 +1,16 @@
 #carouselExampleIndicators {
   margin: auto;
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   width: 700px;
 }
 
 .carousel-item {
-  border: 1px solid rgb(147, 175, 105);
+  border: 1px solid whitesmoke;
   border-radius: 50px;
   width: 700px;
-  height: 400px;
-  background-color: rgb(119, 199, 0);
+  height: 300px;
+  background-color: whitesmoke;
 }
 
 .carousel-indicators {
@@ -27,7 +27,7 @@
   background-size: 60%, 100%;
   border-radius: 40%;
   position: absolute;
-  top: 210px;
+  top: 120px;
 }
 .carousel-control-next-icon {
   height: 40px;
@@ -36,5 +36,5 @@
   background-size: 60%, 100%;
   border-radius: 40%;
   position: absolute;
-  top: 210px;
+  top: 120px;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const NavHeader = () => {
     return (
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -10,30 +10,34 @@ const NavHeader = () => {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-items">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                        <Link class="nav-link" href="/">Home <span class="sr-only"></span></Link>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Other Sites
-                        </a>
+                        </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/">Render My Invoice</a>
-                            <a class="dropdown-item" href="/">Save My Invoice</a>
+                            <Link class="dropdown-item" href="/">About Us</Link>
+                            <Link class="dropdown-item" href="/">Check Stored Invoices</Link>
+                            <Link class="dropdown-item" href="/">Create An Invoice!</Link>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/">See Examples</a>
+                            <Link class="dropdown-item" href="/">See Examples</Link>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <Link class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Behind The Scenes
-                        </a>
+                        </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</a>
-                            <a class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</a>
+                            <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Github Backend</Link>
+                            <Link class="dropdown-item" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-frontend-f12a-elegantbuilders-creation-api">Github Frontend</Link>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/need-help">Need Help?</a>
+                        <Link class="nav-link" href="/Rendered">See Rendered Invoice</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
                     </li>
                 </ul>
             </div>
