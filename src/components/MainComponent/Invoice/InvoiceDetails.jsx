@@ -52,7 +52,7 @@ const InvoiceDetails = (props) => {
                 <div class="row mb-2">
                     <label for="invoice-buyer-details" class="col-sm-2 col-form-label-sm">Electronic&nbsp;Address</label>
                     <div class="col-sm-5 ms-5">
-                        <input type="number" class="form-control-sm" placeholder="123456789" name="buyerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
+                        <input type="number" class="form-control-sm" placeholder="11111111111" name="buyerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@ const InvoiceDetails = (props) => {
                 <div class="row mb-2">
                     <label for="invoice-seller-details" class="col-sm-2 col-form-label-sm">Electronic&nbsp;Address</label>
                     <div class="col-sm-6 ms-5">
-                        <input type="number" class="form-control-sm" placeholder="123456789" name="sellerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
+                        <input type="number" class="form-control-sm" placeholder="11111111111" name="sellerelectronicaddress" onChange={handleChange} onPaste={(e) => { preventPasteNegative(e); keep11DigitPasteBounds(e) }} onKeyDown={(e) => { preventMinus(e); keep11DigitBound(e) }} />
                     </div>
                 </div>
 

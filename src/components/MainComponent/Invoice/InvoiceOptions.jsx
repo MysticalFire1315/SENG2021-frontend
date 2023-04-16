@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { invoiceCreate, invoiceRender } from "../../../pages/api/backend";
-
+import InputError from "./InputError";
 const InvoiceOptions = (props) => {
     const data = props.data;
 
+    const [errorList, setErrorList] = useState([]);
+    const [count, setCount] = useState(0);
+    const handleAddError = (violation) => {
+        const errorKey = count;
+        setErrorList(errorList => ([...errorList, <InputError key={errorKey} />]));
+        setCount(count + 1);
+    };
     const makeInvoice = async () => {
         console.log(data);
         const obj = await invoiceCreate(data);
         console.log(obj);
         if (obj.violations.length !== 0) {
             for (const violation of obj.violations) {
+                handleAddError(violation);
                 console.log(violation);
             }
         } else {
@@ -22,6 +30,9 @@ const InvoiceOptions = (props) => {
 
     return (
         <div id="invoice-options">
+            <div className="error-list">
+                {errorList}
+            </div>
             <button type="button" class="btn btn-secondary btn-sm">Download My Invoice</button>
             <button type="button" onClick={makeInvoice} class="btn btn-secondary btn-sm">Render My Invoice</button>
             <button type="button" class="btn btn-secondary btn-sm">Save My Invoice</button>
