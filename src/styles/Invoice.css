@@ -22,11 +22,6 @@
 .invoice-init-values {
   display: inline-block;
 }
-/* TODO
-.init-details {
-  display: table-cell;
-  width: 600px;
-} */
 
 #invoice-title {
   position: absolute;
