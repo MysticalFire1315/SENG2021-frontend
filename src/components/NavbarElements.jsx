@@ -34,10 +34,10 @@ const NavHeader = () => {
                         </div>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="/Rendered">See Rendered Invoice</Link>
+                        <Link class="nav-link" href="/rendered">See Rendered Invoice</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
+                        <Link class="nav-link" href="/needhelp">Need Help?</Link>
                     </li>
                 </ul>
             </div>

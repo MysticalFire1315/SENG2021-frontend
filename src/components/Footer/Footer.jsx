@@ -19,7 +19,7 @@ const Footer = () => {
                             <Link class="nav-link" href="https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0">E-invoice Rules</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
+                            <Link class="nav-link" href="/needhelp">Need Help?</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" href="https://github.com/cseteaching-unsw-edu-au/se2021-23t1-einvoicing-api-f12a-elegantbuilders-creation-api">Backend</Link>

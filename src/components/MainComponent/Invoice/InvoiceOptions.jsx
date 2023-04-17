@@ -20,7 +20,12 @@ const InvoiceOptions = (props) => {
 
     const handleFileInput = async (file) => {
         const obj = await invoiceCreate(file);
-        showErrorOrRender(obj);
+        if (obj.violations.length !== 0) {
+            for (const violation of obj.violations) {
+                handleAddError(violation);
+                console.log(violation);
+            }
+        }
     };
 
     const showErrorOrRender = async (obj) => {
