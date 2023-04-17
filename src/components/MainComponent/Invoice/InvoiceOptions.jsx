@@ -8,7 +8,7 @@ const InvoiceOptions = (props) => {
     const [count, setCount] = useState(0);
     const handleAddError = (violation) => {
         const errorKey = count;
-        setErrorList(errorList => ([...errorList, <InputError key={errorKey} />]));
+        setErrorList(errorList => ([...errorList, <InputError key={errorKey} id={errorKey} violation={violation} />]));
         setCount(count + 1);
     };
     const makeInvoice = async () => {
@@ -30,12 +30,21 @@ const InvoiceOptions = (props) => {
 
     return (
         <div id="invoice-options">
+            {/* FOr testing */}
+            <div style={{
+                position: "fixed", bottom: "0",
+                right: "20px", zIndex: "99999"
+            }}>
+                <InputError key={0} id={0} violation={"testing12342141212412412414"} />
+                <InputError key={0} id={0} violation={"1234"} />
+                <InputError key={0} id={0} violation={"testing1234"} />
+            </div>
             <div className="error-list">
                 {errorList}
             </div>
             <button type="button" class="btn btn-secondary btn-sm">Download My Invoice</button>
             <button type="button" onClick={makeInvoice} class="btn btn-secondary btn-sm">Render My Invoice</button>
-            <button type="button" class="btn btn-secondary btn-sm">Save My Invoice</button>
+            <button type="button" class="btn btn-secondary btn-sm">Email My Invoice</button>
             {/* <div class="row" className="fileInput">
                 <label for="formFileSm" class="form-label">Upload a file (.JSON, .YAML, .XML)</label>
                 <input class="form-control form-control-sm" id="formFileSm" type="file" />
