@@ -8,7 +8,6 @@ export default function Document() {
       </Head>
       <body>
         <div id="root"></div>
-        <script type="module" src="app.js" async />
         <Main />
         <NextScript />
       </body>
