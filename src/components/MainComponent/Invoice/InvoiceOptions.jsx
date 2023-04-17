@@ -12,9 +12,18 @@ const InvoiceOptions = (props) => {
         setCount(count + 1);
     };
     const makeInvoice = async () => {
+        console.log("here");
         console.log(data);
         const obj = await invoiceCreate(data);
-        console.log(obj);
+        showErrorOrRender(obj);
+    };
+
+    const handleFileInput = async (file) => {
+        const obj = await invoiceCreate(file);
+        showErrorOrRender(obj);
+    };
+
+    const showErrorOrRender = async (obj) => {
         if (obj.violations.length !== 0) {
             for (const violation of obj.violations) {
                 handleAddError(violation);
@@ -26,11 +35,7 @@ const InvoiceOptions = (props) => {
             localStorage.setItem('rawHtml', renderedHtml);
             window.open(`${window.location.origin}/rendered`)
         }
-    };
-
-    const handleFileInput = () => {
-
-    };
+    }
 
     return (
         <div id="invoice-options">
@@ -39,9 +44,9 @@ const InvoiceOptions = (props) => {
                 position: "fixed", bottom: "0",
                 right: "20px", zIndex: "99999"
             }}>
-                <InputError key={0} id={0} violation={"testing12342141212412412414"} />
-                <InputError key={0} id={0} violation={"1234"} />
-                <InputError key={0} id={0} violation={"testing1234"} />
+                <InputError key={5} id={5} violation={"testing12342141212412412414"} />
+                <InputError key={6} id={6} violation={"1234"} />
+                <InputError key={7} id={7} violation={"testing1234"} />
             </div>
             <div className="error-list">
                 {errorList}
@@ -49,9 +54,9 @@ const InvoiceOptions = (props) => {
             <button type="button" class="btn btn-secondary btn-sm">Download My Invoice</button>
             <button type="button" onClick={makeInvoice} class="btn btn-secondary btn-sm">Render My Invoice</button>
             <button type="button" class="btn btn-secondary btn-sm">Email My Invoice</button>
-            <div class="row" className="fileInput">
-                <label for="formFileSm" class="form-label">Upload a file (.json, .yml, .xml)</label>
-                <input class="form-control form-control-sm file-input-field" style={{ width: "350px", position: "relative" }} id="formFileSm" type="file" accept=".json,.yml,.xml" onChange={(e) => handleFileInput(e.target.value)} multiple />
+            <div class="row">
+                <label for="formFileSm">Upload a file (.json, .yml, .xml)</label>
+                <input class="form-control form-control-sm" style={{ width: "350px", position: "relative" }} id="formFileSm" type="file" accept=".json,.yml,.xml" onChange={(e) => handleFileInput(e.target.value)} multiple />
             </div>
         </div>
     );
