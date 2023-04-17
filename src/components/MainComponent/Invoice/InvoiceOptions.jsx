@@ -28,6 +28,10 @@ const InvoiceOptions = (props) => {
         }
     };
 
+    const handleFileInput = () => {
+
+    };
+
     return (
         <div id="invoice-options">
             {/* FOr testing */}
@@ -47,7 +51,7 @@ const InvoiceOptions = (props) => {
             <button type="button" class="btn btn-secondary btn-sm">Email My Invoice</button>
             <div class="row" className="fileInput">
                 <label for="formFileSm" class="form-label">Upload a file (.json, .yml, .xml)</label>
-                <input class="form-control form-control-sm file-input-field" style={{ width: "350px", position: "relative" }} id="formFileSm" type="file" accept=".json,.yml,.xml" multiple />
+                <input class="form-control form-control-sm file-input-field" style={{ width: "350px", position: "relative" }} id="formFileSm" type="file" accept=".json,.yml,.xml" onChange={(e) => handleFileInput(e.target.value)} multiple />
             </div>
         </div>
     );
