@@ -100,17 +100,6 @@ const Invoice = () => {
         }
     };
 
-    // const percentBounds = (e) => {
-    //     console.log(e.target.value);
-    //     console.log(parseInt(e.target.value));
-
-    //     if (parseInt(e.target.value) > 100) {
-    //         e.preventDefault();
-    //     }
-    // }
-
-    // setItemIds(itemIds => ([...itemIds, 0]));
-    // setItems(items => ([...items, <InvoiceItem key={0} id={0} onRemove={handleRemoveItem} onChange={handleChange} onPaste={preventPasteNegative} onKeyDown={preventMinus} />]));
     return (
         <div id="invoice-box">
             <InvoiceOptions data={data} />

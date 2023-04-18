@@ -19,7 +19,7 @@ const InvoiceOptions = (props) => {
     };
 
     const handleFileInput = async (file) => {
-        const obj = await invoiceCreate(file);
+        const obj = await invoiceCreate(file); // Should replace with a function that takes in input file and returns output UBL XML file
         if (obj.violations.length !== 0) {
             for (const violation of obj.violations) {
                 handleAddError(violation);
