@@ -20,9 +20,20 @@ const InvoiceOptions = (props) => {
         }
     };
 
+    const downloadInvoice = async () => {   
+        const pdf = new jsPDF("portrait", "pt", "a4"); 
+        const data = await html2canvas(document.querySelector("#invoice-box"));
+        const img = data.toDataURL("image/png");  
+        const imgProperties = pdf.getImageProperties(img);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProperties.height * pdfWidth) / imgProperties.width;
+        pdf.addImage(img, "PNG", 0, 0, pdfWidth, pdfHeight);
+        pdf.save("invoice.pdf");
+      };
+
     return (
         <div id="invoice-options">
-            <button type="button" class="btn btn-secondary btn-sm">Download My Invoice</button>
+            <button type="button" onClick={downloadInvoice} class="btn btn-secondary btn-sm">Download My Invoice</button>
             <button type="button" onClick={makeInvoice} class="btn btn-secondary btn-sm">Render My Invoice</button>
             <button type="button" class="btn btn-secondary btn-sm">Save My Invoice</button>
             {/* <div class="row" className="fileInput">
