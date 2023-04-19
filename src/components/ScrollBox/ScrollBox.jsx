@@ -31,8 +31,9 @@ const BoxLeft = () => {
         >
             <div className="block-box-left">
                 <br></br>
-                <h1>Fact 1</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsa. Iste accusamus a, magni est tenetur nam minus facilis necessitatibus blanditiis dignissimos expedita itaque corporis, possimus cumque et sint maxime!</p>
+                <h3><strong>Values behind Elegant Builders</strong></h3>
+                <br></br>
+                <p>Starting as a small team of 5, the concept of building a new E-invoice formatter service specifically to ease the pains of the common seller was a vision that we all shared. Features such as services dedicated to previewing, downloading and creating your invoice were all characteristics of our product which we wanted our users to enjoy. Expanding on this project over time, we&apos;ve consistently have had the user&apos;s satisfaction at the heart of our business values, whether it is from simple beginnings to now. Take a look for yourself!</p>
             </div>
         </motion.div>
     );
@@ -60,8 +61,9 @@ const BoxRight = () => {
         >
             <div className="block-box-right">
                 <br></br>
-                <h1>Fact 2</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laboriosam facilis, magnam odit repellat quaerat voluptatem ratione corporis earum quo recusandae. Doloremque veritatis quo, quis fugiat deleniti omnis quasi facere.</p>
+                <h3><strong>Striving for excellence</strong></h3>
+                <br></br>
+                <p>As our company name suggests, we are constantly in the pursuit of elegance, whether that it is in our internal workings which the user never sees, or the words which you are looking at right now. Engrained in our company culture is the desire to always deliver on providing the optimum service for you, whether that is with customer support or making the E-invoice creation experience as simple and comfortable as possible.</p>
             </div>
         </motion.div>
     );
