@@ -23,3 +23,11 @@ export const invoiceRender = async (token) => {
 
   return axiosResponse.data;
 };
+
+export const invoiceDownload = async (token) => {
+  const axiosResponse = await axiosInstance.get('frontend/invoice/download', {
+    params: { token },
+  });
+
+  return axiosResponse.data;
+};
