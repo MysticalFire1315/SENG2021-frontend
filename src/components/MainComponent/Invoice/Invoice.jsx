@@ -140,7 +140,7 @@ const Invoice = () => {
             <Currency onChange={handleChange} />
 
             <div id="invoice-final-details">
-                <div id="invoice-gross-amount" class="row mb-1">
+                {/* <div id="invoice-gross-amount" class="row mb-1">
                     <label for="gross-amount" class="col-sm-4 col-form-label">Gross&nbsp;Total</label>
                     <div class="col-sm-5">
                         <input type="number" class="form-control border border-0 border-bottom border-black" onChange={(e) => handleChange('grossamount', e.target.value)} onPaste={preventPasteNegative} onKeyDown={preventMinus} min={0} />
@@ -157,7 +157,7 @@ const Invoice = () => {
                     <div class="col-sm-6 ms-5">
                         <input type="number" class="form-control border border-0 border-bottom border-black" onChange={(e) => { handlePercentChange('discount', e.target.value) }} onPaste={preventPasteNegative} onKeyDown={(e) => { preventMinus(e) }} min={0} max={100} />
                     </div>
-                </div>
+                </div> */}
                 <div id="invoice-net-amount" class="row mb-1">
                     <label for="net-amount" class="col-sm-4 col-form-label">Net&nbsp;Total</label>
                     <div class="col-sm-5">
