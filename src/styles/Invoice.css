@@ -22,11 +22,6 @@
 .invoice-init-values {
   display: inline-block;
 }
-/* TODO
-.init-details {
-  display: table-cell;
-  width: 600px;
-} */
 
 #invoice-title {
   position: absolute;
@@ -133,8 +128,8 @@
   position: absolute;
   margin: auto;
   text-align: center;
-  margin-top: -120px;
-  margin-left: 225px;
+  margin-top: -100px;
+  margin-left: 150px;
 }
 
 #invoice-note {
@@ -155,13 +150,24 @@
 }
 
 #invoice-gross-amount,
-#invoice-tax-amount,
-#invoice-discount,
-#invoice-net-amount {
+#invoice-tax-amount {
   display: inline-flex;
   text-align: center;
   margin: 2px 0 2px 0;
 }
+
+#invoice-discount {
+  display: inline-flex;
+  text-align: center;
+  margin: 2px 0 2px 5px;
+}
+
+#invoice-net-amount {
+  display: inline-flex;
+  text-align: center;
+  margin: 0px 0 2px 0;
+}
+
 .final-pad {
   margin-right: 5px;
 }
@@ -180,6 +186,20 @@
   margin: auto;
 }
 
-.fileInput {
-  margin: auto;
+.error-list{
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  z-index: 99999;
+}
+
+.error-message{
+  position: sticky;
+  bottom: 0;
+  right: 20px;
+  z-index: 99999;
+}
+
+.error-image {
+
 }

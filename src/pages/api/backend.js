@@ -7,7 +7,6 @@ const axiosInstance = axios.create({
 
 // Returns an object of structure `{ token: string; violations: string[] }`
 export const invoiceCreate = async (data) => {
-  console.log(data);
   const axiosResponse = await axiosInstance.post(
     'frontend/invoice/create',
     data
