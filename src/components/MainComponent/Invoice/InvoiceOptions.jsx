@@ -29,7 +29,7 @@ const InvoiceOptions = (props) => {
         return;
       }
     }
-    const obj = invoiceCreate(data);
+    const obj = await invoiceCreate(data);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
