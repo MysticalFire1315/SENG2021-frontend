@@ -17,9 +17,9 @@ const NavHeader = () => {
                             Other Sites
                         </Link>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <Link class="dropdown-item" href="/">About Us</Link>
+                            <Link class="dropdown-item" href="#main-text">About Us</Link>
                             <Link class="dropdown-item" href="/">Check Stored Invoices</Link>
-                            <Link class="dropdown-item" href="/">Create An Invoice!</Link>
+                            <Link class="dropdown-item" href="#invoice-box">Create An Invoice!</Link>
                             <div class="dropdown-divider"></div>
                             <Link class="dropdown-item" href="/">See Examples</Link>
                         </div>
@@ -34,10 +34,10 @@ const NavHeader = () => {
                         </div>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="/Rendered">See Rendered Invoice</Link>
+                        <Link class="nav-link" href="/rendered">See Rendered Invoice</Link>
                     </li>
                     <li class="nav-item">
-                        <Link class="nav-link" href="/NeedHelp">Need Help?</Link>
+                        <Link class="nav-link" href="/needhelp">Need Help?</Link>
                     </li>
                 </ul>
             </div>

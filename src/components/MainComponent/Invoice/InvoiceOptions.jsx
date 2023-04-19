@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { invoiceCreate, invoiceRender } from '../../../pages/api/backend';
+import InputError from './InputError';
+import { v4 as uuidv4 } from 'uuid';
 
 const InvoiceOptions = (props) => {
   const data = props.data;
-  let token = null;
+  const [errorList, setErrorList] = useState([]);
+
+  const handleAddError = (violation) => {
+    const errorKey = uuidv4();
+    setErrorList((errorList) => [
+      ...errorList,
+      <InputError key={errorKey} id={errorKey} violation={violation} />,
+    ]);
+  };
 
   const makeInvoice = async () => {
     console.log(data);
@@ -11,6 +21,7 @@ const InvoiceOptions = (props) => {
     console.log(obj);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
+        handleAddError(violation);
         console.log(violation);
       }
     } else {
@@ -52,8 +63,20 @@ const InvoiceOptions = (props) => {
     window.open(`${window.location.origin}/Rendered`);
   };
 
+  const handleFileInput = async (file) => {
+    return;
+    const obj = await invoiceCreate(file); // Should replace with a function that takes in input file and returns output UBL XML file
+    if (obj.violations.length !== 0) {
+      for (const violation of obj.violations) {
+        handleAddError(violation);
+        console.log(violation);
+      }
+    }
+  };
+
   return (
     <div id="invoice-options">
+      <div className="error-list">{errorList}</div>
       <button
         type="button"
         onClick={downloadInvoice}
@@ -69,12 +92,20 @@ const InvoiceOptions = (props) => {
         Render My Invoice
       </button>
       <button type="button" class="btn btn-secondary btn-sm">
-        Save My Invoice
+        Email My Invoice
       </button>
-      {/* <div class="row" className="fileInput">
-                <label for="formFileSm" class="form-label">Upload a file (.JSON, .YAML, .XML)</label>
-                <input class="form-control form-control-sm" id="formFileSm" type="file" />
-            </div> */}
+      <div class="row">
+        <label for="formFileSm">Upload a file (.json, .yml, .xml)</label>
+        <input
+          class="form-control form-control-sm"
+          style={{ width: '350px', position: 'relative' }}
+          id="formFileSm"
+          type="file"
+          accept=".json,.yml,.xml"
+          onChange={(e) => handleFileInput(e.target.value)}
+          multiple
+        />
+      </div>
     </div>
   );
 };
