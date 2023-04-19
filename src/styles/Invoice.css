@@ -135,7 +135,7 @@
 #invoice-note {
   position: relative;
   margin-left: 35px;
-  margin-top: -220px;
+  margin-top: -80px;
   margin-bottom: 150px;
   width: 450px;
 }
@@ -149,7 +149,7 @@
   width: 300px;
 }
 
-#invoice-gross-amount,
+/* #invoice-gross-amount,
 #invoice-tax-amount {
   display: inline-flex;
   text-align: center;
@@ -160,7 +160,7 @@
   display: inline-flex;
   text-align: center;
   margin: 2px 0 2px 5px;
-}
+} */
 
 #invoice-net-amount {
   display: inline-flex;
