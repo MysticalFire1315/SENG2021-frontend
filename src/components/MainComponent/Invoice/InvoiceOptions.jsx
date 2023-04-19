@@ -14,9 +14,10 @@ const InvoiceOptions = (props) => {
             }
         } else {
             const renderedHtml = await invoiceRender(obj.token);
+            console.log(renderedHtml);
             // Redirect users to /rendered endpoint and show html
             localStorage.setItem('rawHtml', renderedHtml);
-            window.open(`${window.location.origin}/rendered`)
+            window.open(`${window.location.origin}/Rendered`)
         }
     };
 
