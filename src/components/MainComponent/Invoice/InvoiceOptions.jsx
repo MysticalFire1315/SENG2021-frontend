@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { invoiceCreate, invoiceRender } from '../../../pages/api/backend';
+import {
+  invoiceCreate,
+  invoiceDownload,
+  invoiceRender,
+} from '../../../pages/api/backend';
 import InputError from './InputError';
 import { v4 as uuidv4 } from 'uuid';
 
 const InvoiceOptions = (props) => {
   const data = props.data;
   const [errorList, setErrorList] = useState([]);
+  let token = null;
 
   const handleAddError = (violation) => {
     const errorKey = uuidv4();
@@ -36,8 +41,7 @@ const InvoiceOptions = (props) => {
     if (token === null) {
       return;
     }
-    const xmlString =
-      '<invoice><number>123</number><total>100.00</total></invoice>';
+    const xmlString = await invoiceDownload(token);
     const xmlBlob = new Blob([xmlString], { type: 'text/xml' });
     const xmlUrl = URL.createObjectURL(xmlBlob);
     const link = document.createElement('a');

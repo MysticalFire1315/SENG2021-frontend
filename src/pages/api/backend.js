@@ -16,6 +16,7 @@ export const invoiceCreate = async (data) => {
 };
 
 export const invoiceRender = async (token) => {
+  console.log(token);
   const axiosResponse = await axiosInstance.get('frontend/invoice/render', {
     params: { token },
   });
@@ -24,9 +25,14 @@ export const invoiceRender = async (token) => {
 };
 
 export const invoiceDownload = async (token) => {
-  const axiosResponse = await axiosInstance.get('frontend/invoice/download', {
-    params: { token },
-  });
+  console.log(token);
+  try {
+    const axiosResponse = await axiosInstance.get('frontend/invoice/download', {
+      params: { token },
+    });
 
-  return axiosResponse.data;
+    return axiosResponse.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
