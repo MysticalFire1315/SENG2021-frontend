@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 const InvoiceOptions = (props) => {
   const data = props.data;
   const [errorList, setErrorList] = useState([]);
+  const [files, setFiles] = useState("");
   let token = null;
 
   const handleAddError = (violation) => {
@@ -22,8 +23,13 @@ const InvoiceOptions = (props) => {
 
   const makeInvoice = async () => {
     console.log(data);
+    for (const key in data) {
+      if (data[key] == "") {
+        handleAddError("Missing Input Fields");
+        return;
+      }
+    }
     const obj = await invoiceCreate(data);
-    console.log(obj);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
@@ -67,9 +73,15 @@ const InvoiceOptions = (props) => {
     window.open(`${window.location.origin}/Rendered`);
   };
 
-  const handleFileInput = async (file) => {
-    return;
-    const obj = await invoiceCreate(file); // Should replace with a function that takes in input file and returns output UBL XML file
+  const handleFileInput = async (e) => {
+    const fileReader = new FileReader();
+    fileReader.readAsText(e.target.files[0], "UTF-8");
+    fileReader.onload = e => {
+      console.log("e.target.result", e.target.result);
+      setFiles(e.target.result);
+    };
+     // Should replace with a function that takes in input file and returns output UBL XML file
+
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
@@ -89,7 +101,7 @@ const InvoiceOptions = (props) => {
             id="formFileSm"
             type="file"
             accept=".json,.yml,.xml"
-            onChange={(e) => handleFileInput(e.target.value)}
+            onChange={handleFileInput}
             multiple
           />
         </div>
