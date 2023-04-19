@@ -29,7 +29,7 @@ const InvoiceOptions = (props) => {
         return;
       }
     }
-    const obj = await invoiceCreate(data);
+    const obj = invoiceCreate(data);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
@@ -39,6 +39,7 @@ const InvoiceOptions = (props) => {
       token = obj.token;
     }
   };
+
 
   const downloadInvoice = async () => {
     // Create invoice
@@ -82,12 +83,16 @@ const InvoiceOptions = (props) => {
     };
      // Should replace with a function that takes in input file and returns output UBL XML file
 
+    const obj = invoiceCreate(data);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
         console.log(violation);
       }
+    } else {
+      token = obj.token;
     }
+    await downloadInvoice();
   };
 
   return (
@@ -102,7 +107,6 @@ const InvoiceOptions = (props) => {
             type="file"
             accept=".json,.yml,.xml"
             onChange={handleFileInput}
-            multiple
           />
         </div>
       </div>
