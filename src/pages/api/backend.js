@@ -36,3 +36,8 @@ export const invoiceDownload = async (token) => {
     console.log(error);
   }
 };
+
+export const invoiceUpload = async (invoiceString, type) => {
+
+
+};

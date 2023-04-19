@@ -82,6 +82,7 @@ const InvoiceOptions = (props) => {
       setFiles(e.target.result);
     };
      // Should replace with a function that takes in input file and returns output UBL XML file
+    await invoiceUpload(..., ...);
 
     const obj = invoiceCreate(data);
     if (obj.violations.length !== 0) {
@@ -92,7 +93,6 @@ const InvoiceOptions = (props) => {
     } else {
       token = obj.token;
     }
-    await downloadInvoice();
   };
 
   return (
