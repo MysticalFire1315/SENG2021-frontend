@@ -40,7 +40,7 @@ export const invoiceDownload = async (token) => {
 export const invoiceUpload = async (invoiceString, type) => {
   const axiosResponse = await axiosInstance.post('frontend/invoice/upload', {
     invoice: invoiceString,
-    type: type
+    type: type,
   });
   return axiosResponse.data;
 };

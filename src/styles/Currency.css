@@ -1,15 +1,16 @@
-#currency-box{
-    position:absolute;
-    display: inline-block;
-    width: 150px;
-    height: 290px;
-    border: 1px solid #C0C9CC;
-    background-color: #C0C9CC;
-    border-radius: 10px;
-    vertical-align: middle;
-    text-align: center;
-    padding: 20px 15px 20px 15px;
-    margin-top: 800px;
-    margin-left: 880px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#currency-box {
+  position: absolute;
+  display: inline-block;
+  width: 150px;
+  height: 290px;
+  border: 1px solid #c0c9cc;
+  background-color: #c0c9cc;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 20px 15px 20px 15px;
+  margin-top: 800px;
+  margin-left: 880px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }

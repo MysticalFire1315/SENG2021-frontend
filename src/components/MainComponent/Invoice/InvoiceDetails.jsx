@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 const InvoiceDetails = (props) => {
   const handleChange = (event) => {
     props.onChange(event.target.name, event.target.value);
@@ -10,7 +10,7 @@ const InvoiceDetails = (props) => {
   };
   const keep11DigitPasteBounds = (event) => {
     const clipboardData = event.clipboardData || window.clipboardData;
-    const pastedData = parseFloat(clipboardData.getData("text"));
+    const pastedData = parseFloat(clipboardData.getData('text'));
 
     if (pastedData >= 100000000000) {
       event.preventDefault();
@@ -101,7 +101,7 @@ const InvoiceDetails = (props) => {
           </label>
           <div class="col-sm-5 border border-0">
             <select
-              style={{ width: "90px" }}
+              style={{ width: '90px' }}
               name="buyerelectronicaddressscheme"
               onChange={handleChange}
             >
@@ -234,7 +234,7 @@ const InvoiceDetails = (props) => {
           </label>
           <div class="col-sm-5 border border-0">
             <select
-              style={{ width: "90px" }}
+              style={{ width: '90px' }}
               name="sellerelectronicaddressscheme"
               onChange={handleChange}
             >

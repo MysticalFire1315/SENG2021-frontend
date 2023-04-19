@@ -79,7 +79,7 @@ const InvoiceOptions = (props) => {
       fileReader.readAsText(e.target.files[0], 'UTF-8');
       fileReader.onload = (e) => {
         resolve(e.target.result);
-      }
+      };
     });
 
     const type = e.target.files[0].type.replace(/(.*)\//g, '');
