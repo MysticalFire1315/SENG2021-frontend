@@ -29,7 +29,7 @@ const InvoiceOptions = (props) => {
         return;
       }
     }
-    const obj = invoiceCreate(data);
+    const obj = await invoiceCreate(data);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
@@ -79,7 +79,7 @@ const InvoiceOptions = (props) => {
       fileReader.readAsText(e.target.files[0], 'UTF-8');
       fileReader.onload = (e) => {
         resolve(e.target.result);
-      }
+      };
     });
 
     const type = e.target.files[0].type.replace(/(.*)\//g, '');

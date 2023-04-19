@@ -14,10 +14,9 @@
 }
 
 .carousel-indicators {
-    position: absolute;
-    display: inline-block;
-    margin-left: 295px;
-
+  position: absolute;
+  display: inline-block;
+  margin-left: 295px;
 }
 
 .carousel-control-prev-icon {
