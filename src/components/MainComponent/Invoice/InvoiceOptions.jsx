@@ -75,14 +75,14 @@ const InvoiceOptions = (props) => {
   };
 
   const handleFileInput = async (e) => {
+    return;
     const fileReader = new FileReader();
     fileReader.readAsText(e.target.files[0], "UTF-8");
     fileReader.onload = e => {
       console.log("e.target.result", e.target.result);
       setFiles(e.target.result);
     };
-     // Should replace with a function that takes in input file and returns output UBL XML file
-    await invoiceUpload(..., ...);
+    // Should replace with a function that takes in input file and returns output UBL XML file
 
     const obj = invoiceCreate(data);
     if (obj.violations.length !== 0) {
@@ -114,19 +114,16 @@ const InvoiceOptions = (props) => {
       <button
         type="button"
         onClick={downloadInvoice}
-        class="btn btn-secondary btn-sm"
+        class="btn btn-secondary btn-sm me-5"
       >
         Download My Invoice
       </button>
       <button
         type="button"
         onClick={renderInvoice}
-        class="btn btn-secondary btn-sm"
+        class="btn btn-secondary btn-sm ms-5"
       >
         Render My Invoice
-      </button>
-      <button type="button" class="btn btn-secondary btn-sm">
-        Email My Invoice
       </button>
     </div>
   );

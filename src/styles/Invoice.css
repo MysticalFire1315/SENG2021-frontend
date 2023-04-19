@@ -125,11 +125,9 @@
 }
 
 #invoice-options {
-  position: absolute;
-  margin: auto;
+  position: relative;
   text-align: center;
   margin-top: -150px;
-  margin-left: 200px;
 }
 
 #invoice-note {
@@ -201,6 +199,7 @@
 }
 
 .invoice-file-options {
+  margin: auto;
   margin-bottom: 20px;
   width: 400px;
   height: 80px;
