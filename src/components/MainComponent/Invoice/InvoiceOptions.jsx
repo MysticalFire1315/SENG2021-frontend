@@ -3,6 +3,7 @@ import {
   invoiceCreate,
   invoiceDownload,
   invoiceRender,
+  invoiceUpload,
 } from '../../../pages/api/backend';
 import InputError from './InputError';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +11,6 @@ import { v4 as uuidv4 } from 'uuid';
 const InvoiceOptions = (props) => {
   const data = props.data;
   const [errorList, setErrorList] = useState([]);
-  const [files, setFiles] = useState("");
   let token = null;
 
   const handleAddError = (violation) => {
@@ -24,8 +24,8 @@ const InvoiceOptions = (props) => {
   const makeInvoice = async () => {
     console.log(data);
     for (const key in data) {
-      if (data[key] == "") {
-        handleAddError("Missing Input Fields");
+      if (data[key] == '') {
+        handleAddError('Missing Input Fields');
         return;
       }
     }
@@ -39,7 +39,6 @@ const InvoiceOptions = (props) => {
       token = obj.token;
     }
   };
-
 
   const downloadInvoice = async () => {
     // Create invoice
@@ -75,23 +74,34 @@ const InvoiceOptions = (props) => {
   };
 
   const handleFileInput = async (e) => {
-    const fileReader = new FileReader();
-    fileReader.readAsText(e.target.files[0], "UTF-8");
-    fileReader.onload = e => {
-      console.log("e.target.result", e.target.result);
-      setFiles(e.target.result);
-    };
-     // Should replace with a function that takes in input file and returns output UBL XML file
-    await invoiceUpload(..., ...);
+    const filePromise = new Promise((resolve) => {
+      const fileReader = new FileReader();
+      fileReader.readAsText(e.target.files[0], 'UTF-8');
+      fileReader.onload = (e) => {
+        resolve(e.target.result);
+      }
+    });
 
-    const obj = invoiceCreate(data);
+    const type = e.target.files[0].type.replace(/(.*)\//g, '');
+    let fileContent = await filePromise;
+
+    const obj = await invoiceUpload(fileContent, type);
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
         console.log(violation);
       }
     } else {
-      token = obj.token;
+      const xmlString = await invoiceDownload(obj.token);
+      const xmlBlob = new Blob([xmlString], { type: 'text/xml' });
+      const xmlUrl = URL.createObjectURL(xmlBlob);
+      const link = document.createElement('a');
+      link.href = xmlUrl;
+      link.download = 'invoice.xml';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(xmlUrl);
     }
   };
 
