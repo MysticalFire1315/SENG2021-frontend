@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import { invoiceCreate, invoiceRender } from "../../../pages/api/backend";
 import InputError from "./InputError";
+import { v4 as uuidv4 } from 'uuid';
 const InvoiceOptions = (props) => {
     const data = props.data;
 
     const [errorList, setErrorList] = useState([]);
-    const [count, setCount] = useState(0);
     const handleAddError = (violation) => {
-        const errorKey = count;
+        const errorKey = uuidv4();
         setErrorList(errorList => ([...errorList, <InputError key={errorKey} id={errorKey} violation={violation} />]));
-        setCount(count + 1);
     };
     const makeInvoice = async () => {
-        console.log("here");
-        console.log(data);
         const obj = await invoiceCreate(data);
         showErrorOrRender(obj);
     };
 
     const handleFileInput = async (file) => {
+        return;
         const obj = await invoiceCreate(file); // Should replace with a function that takes in input file and returns output UBL XML file
         if (obj.violations.length !== 0) {
             for (const violation of obj.violations) {
@@ -45,15 +43,6 @@ const InvoiceOptions = (props) => {
 
     return (
         <div id="invoice-options">
-            {/* FOr testing */}
-            <div style={{
-                position: "fixed", bottom: "0",
-                right: "20px", zIndex: "99999"
-            }}>
-                <InputError key={5} id={5} violation={"testing12342141212412412414"} />
-                <InputError key={6} id={6} violation={"1234"} />
-                <InputError key={7} id={7} violation={"testing1234"} />
-            </div>
             <div className="error-list">
                 {errorList}
             </div>
