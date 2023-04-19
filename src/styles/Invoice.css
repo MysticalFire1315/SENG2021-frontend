@@ -3,7 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 200px;
-  margin-top: 160px;
+  margin-top: 190px;
   width: 850px;
   min-height: 1200px; /*subject to change from flexbox invoice items*/
   border: 1px solid black;
@@ -128,8 +128,8 @@
   position: absolute;
   margin: auto;
   text-align: center;
-  margin-top: -100px;
-  margin-left: 150px;
+  margin-top: -150px;
+  margin-left: 200px;
 }
 
 #invoice-note {
@@ -200,6 +200,12 @@
   z-index: 99999;
 }
 
-.error-image {
-
+.invoice-file-options {
+  margin-bottom: 20px;
+  width: 400px;
+  height: 80px;
+  background-color: lightblue;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 20px;
+  padding: 10px;
 }
