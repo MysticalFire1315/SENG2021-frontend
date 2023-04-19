@@ -22,9 +22,8 @@ const InvoiceOptions = (props) => {
   };
 
   const makeInvoice = async () => {
-    console.log(data);
     for (const key in data) {
-      if (data[key] == '') {
+      if (data[key] == '' && !key.includes("notes")) {
         handleAddError('Missing Input Fields');
         return;
       }
@@ -33,7 +32,6 @@ const InvoiceOptions = (props) => {
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
-        console.log(violation);
       }
     } else {
       token = obj.token;
@@ -67,7 +65,6 @@ const InvoiceOptions = (props) => {
       return;
     }
     const renderedHtml = await invoiceRender(token);
-    console.log(renderedHtml);
     // Redirect users to /rendered endpoint and show html
     localStorage.setItem('rawHtml', renderedHtml);
     window.open(`${window.location.origin}/Rendered`);
@@ -89,7 +86,6 @@ const InvoiceOptions = (props) => {
     if (obj.violations.length !== 0) {
       for (const violation of obj.violations) {
         handleAddError(violation);
-        console.log(violation);
       }
     } else {
       const xmlString = await invoiceDownload(obj.token);
