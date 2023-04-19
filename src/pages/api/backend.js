@@ -2,8 +2,7 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({
   baseURL:
-    // 'http://seng2021-f12a-api-env.eba-pymctycp.ap-southeast-2.elasticbeanstalk.com/',
-    'http://localhost:3000/'
+    'http://seng2021-f12a-api-env.eba-pymctycp.ap-southeast-2.elasticbeanstalk.com/',
 });
 
 // Returns an object of structure `{ token: string; violations: string[] }`
