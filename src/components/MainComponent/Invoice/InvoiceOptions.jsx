@@ -124,19 +124,16 @@ const InvoiceOptions = (props) => {
       <button
         type="button"
         onClick={downloadInvoice}
-        class="btn btn-secondary btn-sm"
+        class="btn btn-secondary btn-sm me-5"
       >
         Download My Invoice
       </button>
       <button
         type="button"
         onClick={renderInvoice}
-        class="btn btn-secondary btn-sm"
+        class="btn btn-secondary btn-sm ms-5"
       >
         Render My Invoice
-      </button>
-      <button type="button" class="btn btn-secondary btn-sm">
-        Email My Invoice
       </button>
     </div>
   );

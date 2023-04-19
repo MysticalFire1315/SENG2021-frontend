@@ -4,8 +4,6 @@ import '../styles/styles.css'
 
 import '../styles/Carousel.css'
 import '../styles/Currency.css'
-import '../styles/Footer.css'
-import '../styles/Header.css'
 import '../styles/MainComponent.css'
 import '../styles/Invoice.css'
 import "bootstrap/dist/css/bootstrap.min.css" // Import bootstrap CSS
