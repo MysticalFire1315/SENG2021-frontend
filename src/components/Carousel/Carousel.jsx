@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '@/styles/Carousel.module.css';
 
 const Carousel = () => {
   return (
@@ -32,12 +33,7 @@ const Carousel = () => {
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="carousel-caption d-none d-md-block">
-            <h3
-              style={{
-                color: '#243762',
-                fontFamily: 'Trebuchet MS, Lucida Sans Unicode',
-              }}
-            >
+            <h3 className={styles.carouseltext}>
               &quot;I never thought that invoice transactions could be made so
               simple!&quot;
             </h3>
@@ -56,12 +52,7 @@ const Carousel = () => {
         </div>
         <div class="carousel-item">
           <div class="carousel-caption d-none d-md-block">
-            <h3
-              style={{
-                color: '#243762',
-                fontFamily: 'Trebuchet MS, Lucida Sans Unicode',
-              }}
-            >
+            <h3 className={styles.carouseltext}>
               &quot;From creating invoices for me, letting me store them, saving
               them for later. What else can I say?&quot;
             </h3>
@@ -79,12 +70,7 @@ const Carousel = () => {
         </div>
         <div class="carousel-item">
           <div class="carousel-caption d-none d-md-block">
-            <h3
-              style={{
-                color: '#243762',
-                fontFamily: 'Trebuchet MS, Lucida Sans Unicode',
-              }}
-            >
+            <h3 className={styles.carouseltext}>
               &quot;They always respond so quickly to any concerns I have.
               That&apos;s always great.&quot;
             </h3>
